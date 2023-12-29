@@ -2,14 +2,22 @@
 
 import { ReactNode, useEffect, useState } from 'react'
 
-const Hydrate = ({ children }: { children: ReactNode }) => {
+type HydrateProps = {
+  skeleton?: ReactNode
+  children: ReactNode
+}
+
+const Hydrate = ({ skeleton, children }: HydrateProps) => {
   const [isMounted, setIsMounted] = useState<boolean>(false)
 
   useEffect(() => {
     setIsMounted(true)
   }, [])
 
-  if (isMounted === false) return null
+  if (isMounted === false) {
+    if (!skeleton) return null
+    return <>{skeleton}</>
+  }
 
   return <>{children}</>
 }

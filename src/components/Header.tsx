@@ -6,7 +6,7 @@ import { HiMagnifyingGlass } from 'react-icons/hi2'
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between gap-8 px-20 py-7 text-xl font-bold text-neutral-400">
+    <header className="fixed left-0 top-0 z-50 flex w-full items-center justify-between gap-8 bg-neutral-0 px-20 py-5 text-xl font-bold text-neutral-400">
       <div>
         <Link href="/home">
           <Image src={logoAvaSus} alt="Logomarca" width={200} />
