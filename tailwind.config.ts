@@ -4,6 +4,15 @@ const config: Config = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
+      container: {
+        center: true,
+        screens: {
+          sm: '640px',
+          md: '768px',
+          lg: '1024px',
+          xl: '1110px',
+        },
+      },
       colors: {
         'primary-color': {
           light: '#F6303F',

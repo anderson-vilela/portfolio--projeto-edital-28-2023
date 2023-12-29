@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply flex min-h-screen flex-col;
+  }
+
   h1 {
     @apply text-[2.5rem] font-semibold;
   }
@@ -30,5 +34,9 @@
   p,
   span {
     @apply text-neutral-400;
+  }
+
+  .main-content {
+    @apply mx-auto w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1110px];
   }
 }
