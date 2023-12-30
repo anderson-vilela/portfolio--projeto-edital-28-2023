@@ -37,22 +37,22 @@ const Header = () => {
         </nav>
         <label
           htmlFor="header-search"
-          className="group flex w-[21.875rem] items-center rounded-[20px] border-2 border-neutral-200 bg-transparent px-4 text-neutral-300 duration-300 hover:cursor-text hover:border-primary-color-dark"
+          className="group flex w-[21.875rem] items-center rounded-[20px] border-2 border-secundary-color-dark/20 bg-transparent px-4 text-secundary-color-light duration-300 hover:cursor-text hover:border-primary-color-dark"
         >
-          <HiMagnifyingGlass className="duration-300 group-hover:text-primary-color-dark" />
+          <HiMagnifyingGlass className="text-secundary-color-light duration-300 group-hover:text-primary-color-dark" />
           <input
             type="search"
             name="search"
             id="header-search"
             placeholder="Buscar por um assunto..."
-            className="w-full bg-transparent p-2 text-base text-neutral-300 outline-none duration-300 placeholder:text-neutral-300 group-hover:placeholder:text-primary-color-dark"
+            className="w-full bg-transparent p-2 text-base text-secundary-color-light outline-none duration-300 placeholder:text-secundary-color-light group-hover:placeholder:text-primary-color-dark"
           />
         </label>
         <div className="flex items-center gap-4">
-          <button className="rounded-[20px] border border-neutral-300 bg-transparent px-7 py-2 text-neutral-300 duration-300 hover:border-primary-color-dark hover:bg-primary-color-dark hover:text-neutral-0">
+          <button className="rounded-[20px] border border-secundary-color-light bg-transparent px-7 py-2 text-secundary-color-light duration-300 hover:border-primary-color-dark hover:bg-primary-color-dark hover:text-neutral-0">
             Entrar
           </button>
-          <button className="rounded-[20px] bg-neutral-300 px-7 py-2 text-neutral-0 hover:border-primary-color-dark hover:bg-primary-color-dark">
+          <button className="rounded-[20px] bg-secundary-color-light px-7 py-2 text-neutral-0 hover:border-primary-color-dark hover:bg-primary-color-dark">
             Cadastrar
           </button>
         </div>
