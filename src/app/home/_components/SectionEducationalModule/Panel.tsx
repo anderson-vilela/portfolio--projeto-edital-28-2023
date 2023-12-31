@@ -60,6 +60,7 @@ const Panel = ({
               matriculados={course.matriculados}
               duracao={course.duracao}
               avaliacao={course.avaliacao}
+              id={course.id}
             />
           ))}
         </div>
@@ -76,6 +77,7 @@ const Panel = ({
               matriculados={course.matriculados}
               duracao={course.duracao}
               avaliacao={course.avaliacao}
+              id={course.id}
             />
           ))}
         </div>
@@ -92,6 +94,7 @@ const Panel = ({
               matriculados={course.matriculados}
               duracao={course.duracao}
               avaliacao={course.avaliacao}
+              id={course.id}
             />
           ))}
         </div>

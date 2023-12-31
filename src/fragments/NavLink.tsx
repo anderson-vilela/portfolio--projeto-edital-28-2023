@@ -10,7 +10,7 @@ type NavLinkProps = LinkProps & {
 
 const NavLink = ({ href, children, ...rest }: NavLinkProps) => {
   const pathname = usePathname()
-  const isActive = pathname === href.toString()
+  const isActive = pathname.includes(href.toString())
 
   return (
     <>
