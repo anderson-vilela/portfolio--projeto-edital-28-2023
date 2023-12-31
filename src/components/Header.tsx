@@ -49,10 +49,10 @@ const Header = () => {
           />
         </label>
         <div className="flex items-center gap-4">
-          <button className="rounded-[20px] border border-tw-secundary-color-light bg-transparent px-7 py-2 text-tw-secundary-color-light duration-300 hover:border-tw-primary-color-dark hover:bg-tw-primary-color-dark hover:text-tw-neutral-0">
+          <button className="rounded-[20px] border border-tw-secundary-color-light bg-transparent px-7 py-2 font-semibold text-tw-secundary-color-light duration-300 hover:border-tw-primary-color-dark hover:bg-tw-primary-color-dark hover:text-tw-neutral-0">
             Entrar
           </button>
-          <button className="rounded-[20px] bg-tw-secundary-color-light px-7 py-2 text-tw-neutral-0 hover:border-tw-primary-color-dark hover:bg-tw-primary-color-dark">
+          <button className="rounded-[20px] bg-tw-secundary-color-light px-7 py-2 font-semibold text-tw-neutral-0 hover:border-tw-primary-color-dark hover:bg-tw-primary-color-dark">
             Cadastrar
           </button>
         </div>

@@ -35,7 +35,7 @@ const Footer = () => {
           <div>
             <h4 className="text-2xl text-tw-neutral-0">Links Úteis</h4>
             <nav className="mt-4">
-              <ul className="text-tw-neutral-0">
+              <ul className="grid gap-2 text-tw-neutral-0">
                 <li>
                   <NavLink href="/home">Início</NavLink>
                 </li>
