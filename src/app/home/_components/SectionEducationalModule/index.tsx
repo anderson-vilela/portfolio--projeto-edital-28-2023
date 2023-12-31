@@ -1,4 +1,5 @@
 import { APIDataType } from '@/types/TypesAPI'
+import Link from 'next/link'
 import Panel from './Panel'
 
 async function fetchCourses(resource: string) {
@@ -61,9 +62,12 @@ const SectionEducationalModule = async () => {
         latestCourses={latestCourses}
       />
       <div className="mt-16 flex items-center justify-center">
-        <button className="inline-block rounded-[20px] bg-tw-secundary-color-light px-28 py-3 text-2xl font-semibold text-tw-neutral-0 duration-300 hover:bg-tw-secundary-color">
+        <Link
+          href={'/courses'}
+          className="inline-block rounded-[20px] bg-tw-secundary-color-light px-28 py-3 text-2xl font-semibold text-tw-neutral-0 duration-300 hover:bg-tw-secundary-color"
+        >
           Ver mais
-        </button>
+        </Link>
       </div>
     </section>
   )
