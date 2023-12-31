@@ -9,6 +9,15 @@ const nextConfig = {
       },
     ]
   },
+
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avasus.ufrn.br',
+      },
+    ],
+  },
 }
 
 module.exports = nextConfig

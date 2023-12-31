@@ -18,8 +18,8 @@ const NavLink = ({ href, children, ...rest }: NavLinkProps) => {
         href={href}
         className={`${
           isActive
-            ? 'text-neutral-300 duration-300 hover:text-primary-color-dark'
-            : 'duration-300 hover:text-primary-color-dark'
+            ? 'text-tw-neutral-300 duration-300 hover:text-tw-primary-color-dark'
+            : 'duration-300 hover:text-tw-primary-color-dark'
         }`}
         {...rest}
       >

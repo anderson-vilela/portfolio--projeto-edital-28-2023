@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    @apply antialiased;
+  }
+
   body {
     @apply flex min-h-screen flex-col;
   }
@@ -33,7 +37,7 @@
   h4,
   p,
   span {
-    @apply text-neutral-400;
+    @apply text-tw-neutral-400;
   }
 
   .main-content {

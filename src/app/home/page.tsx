@@ -1,19 +1,19 @@
+import SlideCarousel from '@/app/home/_components/SlideCarousel'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-import Hydrate from '@/components/Hydrate'
-import SlideCarousel from '@/components/SlideCarousel'
-import SkeletonSlideCarousel from '@/skeletons/SkeletonSlideCarousel'
+import SectionEducationalModule from './_components/SectionEducationalModule'
+import SectionPartners from './_components/SectionPartners'
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <Header />
       <main className="flex-1">
         <div className="h-[54rem] pt-24">
-          <Hydrate skeleton={<SkeletonSlideCarousel />}>
-            <SlideCarousel />
-          </Hydrate>
+          <SlideCarousel />
         </div>
+        <SectionEducationalModule />
+        <SectionPartners />
       </main>
       <Footer />
     </>

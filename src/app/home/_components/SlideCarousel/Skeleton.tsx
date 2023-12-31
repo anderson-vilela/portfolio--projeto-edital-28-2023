@@ -1,7 +1,7 @@
 import loadingSlide from '@/assets/img/loading-slide.svg'
 import Image from 'next/image'
 
-const SkeletonSlideCarousel = () => {
+const Skeleton = () => {
   return (
     <div className="flex h-full w-full items-center justify-center bg-gray-200">
       <Image
@@ -13,4 +13,4 @@ const SkeletonSlideCarousel = () => {
   )
 }
 
-export default SkeletonSlideCarousel
+export default Skeleton

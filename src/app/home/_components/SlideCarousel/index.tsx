@@ -111,17 +111,17 @@ const SlideCarousel = () => {
         <ul className="flex items-center justify-center gap-2">
           <li
             data-activebutton={currentSlide === 1}
-            className="h-4 w-4 cursor-pointer rounded-full border border-white duration-300 hover:bg-primary-color-dark data-[activebutton=true]:w-14 data-[activebutton=true]:bg-white data-[activebutton=true]:hover:bg-primary-color-dark"
+            className="h-4 w-4 cursor-pointer rounded-full border border-white duration-300 hover:bg-tw-primary-color-dark data-[activebutton=true]:w-14 data-[activebutton=true]:bg-white data-[activebutton=true]:hover:bg-tw-primary-color-dark"
             onClick={() => setCurrentSlide(1)}
           />
           <li
             data-activebutton={currentSlide === 2}
-            className="h-4 w-4 cursor-pointer rounded-full border border-white duration-300 hover:bg-primary-color-dark data-[activebutton=true]:w-14 data-[activebutton=true]:bg-white data-[activebutton=true]:hover:bg-primary-color-dark"
+            className="h-4 w-4 cursor-pointer rounded-full border border-white duration-300 hover:bg-tw-primary-color-dark data-[activebutton=true]:w-14 data-[activebutton=true]:bg-white data-[activebutton=true]:hover:bg-tw-primary-color-dark"
             onClick={() => setCurrentSlide(2)}
           />
           <li
             data-activebutton={currentSlide === 3}
-            className="h-4 w-4 cursor-pointer rounded-full border border-white duration-300 hover:bg-primary-color-dark data-[activebutton=true]:w-14 data-[activebutton=true]:bg-white data-[activebutton=true]:hover:bg-primary-color-dark"
+            className="h-4 w-4 cursor-pointer rounded-full border border-white duration-300 hover:bg-tw-primary-color-dark data-[activebutton=true]:w-14 data-[activebutton=true]:bg-white data-[activebutton=true]:hover:bg-tw-primary-color-dark"
             onClick={() => setCurrentSlide(3)}
           />
         </ul>

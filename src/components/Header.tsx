@@ -6,7 +6,7 @@ import { HiMagnifyingGlass } from 'react-icons/hi2'
 
 const Header = () => {
   return (
-    <header className="fixed left-0 top-0 z-50 flex w-full items-center justify-between gap-8 bg-neutral-0 px-20 py-5 text-xl font-bold text-neutral-400">
+    <header className="fixed left-0 top-0 z-50 flex w-full items-center justify-between gap-8 bg-tw-neutral-0 px-20 py-5 text-xl font-bold text-tw-neutral-400">
       <div>
         <Link href="/home">
           <Image src={logoAvaSus} alt="Logomarca" width={200} />
@@ -37,22 +37,22 @@ const Header = () => {
         </nav>
         <label
           htmlFor="header-search"
-          className="group flex w-[21.875rem] items-center rounded-[20px] border-2 border-secundary-color-dark/20 bg-transparent px-4 text-secundary-color-light duration-300 hover:cursor-text hover:border-primary-color-dark"
+          className="group flex w-[21.875rem] items-center rounded-[20px] border-2 border-tw-secundary-color-dark/20 bg-transparent px-4 text-tw-secundary-color-light duration-300 hover:cursor-text hover:border-tw-primary-color-dark"
         >
-          <HiMagnifyingGlass className="text-secundary-color-light duration-300 group-hover:text-primary-color-dark" />
+          <HiMagnifyingGlass className="text-tw-secundary-color-light duration-300 group-hover:text-tw-primary-color-dark" />
           <input
             type="search"
             name="search"
             id="header-search"
             placeholder="Buscar por um assunto..."
-            className="w-full bg-transparent p-2 text-base text-secundary-color-light outline-none duration-300 placeholder:text-secundary-color-light group-hover:placeholder:text-primary-color-dark"
+            className="w-full bg-transparent p-2 text-base text-tw-secundary-color-light outline-none duration-300 placeholder:text-tw-secundary-color-light group-hover:placeholder:text-tw-primary-color-dark"
           />
         </label>
         <div className="flex items-center gap-4">
-          <button className="rounded-[20px] border border-secundary-color-light bg-transparent px-7 py-2 text-secundary-color-light duration-300 hover:border-primary-color-dark hover:bg-primary-color-dark hover:text-neutral-0">
+          <button className="rounded-[20px] border border-tw-secundary-color-light bg-transparent px-7 py-2 text-tw-secundary-color-light duration-300 hover:border-tw-primary-color-dark hover:bg-tw-primary-color-dark hover:text-tw-neutral-0">
             Entrar
           </button>
-          <button className="rounded-[20px] bg-secundary-color-light px-7 py-2 text-neutral-0 hover:border-primary-color-dark hover:bg-primary-color-dark">
+          <button className="rounded-[20px] bg-tw-secundary-color-light px-7 py-2 text-tw-neutral-0 hover:border-tw-primary-color-dark hover:bg-tw-primary-color-dark">
             Cadastrar
           </button>
         </div>
