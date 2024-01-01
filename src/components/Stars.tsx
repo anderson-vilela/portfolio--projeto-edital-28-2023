@@ -1,18 +1,38 @@
 import { FaRegStar, FaStar, FaStarHalfStroke } from 'react-icons/fa6'
+import { twMerge } from 'tailwind-merge'
 
 type StarsProps = {
   rating: string | number
+  className?: {
+    fullStarStyle?: string
+    halfStarStyle?: string
+    emptyStarStyle?: string
+    mainDivStyle?: string
+  }
 }
 
-const Stars = ({ rating }: StarsProps) => {
+const Stars = ({ rating, className }: StarsProps) => {
   const ratingNumber = Number(rating)
 
-  const fullStar = <FaStar />
-  const halfStar = <FaStarHalfStroke className="text-[28px]" />
-  const emptyStar = <FaRegStar className="border-blue-400 text-[26px]" />
+  const fullStar = (
+    <FaStar className={twMerge('text-[26px]', className?.fullStarStyle)} />
+  )
+  const halfStar = (
+    <FaStarHalfStroke
+      className={twMerge('text-[30px]', className?.halfStarStyle)}
+    />
+  )
+  const emptyStar = (
+    <FaRegStar className={twMerge('text-[28px]', className?.emptyStarStyle)} />
+  )
 
   return (
-    <div className="flex items-center justify-center gap-2 text-2xl text-tw-primary-color-light">
+    <div
+      className={twMerge(
+        'flex items-center justify-center gap-2 text-2xl text-tw-primary-color-light',
+        className?.mainDivStyle,
+      )}
+    >
       {ratingNumber >= 1
         ? fullStar
         : ratingNumber >= 0.5

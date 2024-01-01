@@ -1,7 +1,15 @@
 import { APIDataType } from '@/types/TypesAPI'
+import Panel from './Panel'
+
+export type ListOfCoursesType = {
+  category: string
+  courses: APIDataType[]
+}[]
 
 async function getListOfCourses() {
-  const response = await fetch(`${process.env.URL_API_JSON_SERVER}/cursos`)
+  const response = await fetch(`${process.env.URL_API_JSON_SERVER}/cursos`, {
+    next: { revalidate: 3600, tags: ['listOfCoursesSeparatedByCategories'] },
+  })
   const data = await response.json()
 
   const listOfCategories = new Set(
@@ -32,7 +40,7 @@ async function getListOfCourses() {
       category,
       courses,
     }
-  })
+  }) as ListOfCoursesType
 
   return listOfCourses
 }
@@ -46,18 +54,7 @@ const EducationalModulesSection = async () => {
         <h1 className="mt-[30px] text-center text-[40px] font-semibold text-tw-primary-color">
           Módulos Educacionais
         </h1>
-        {listOfCoursesSeparatedByCategories.map(({ category, courses }) => (
-          <div key={category} className="mt-8">
-            <h2 className="text-2xl font-semibold">{category}</h2>
-            <ul className="grid gap-2">
-              {courses.map((course) => (
-                <li key={course.id}>
-                  <h3 className="text-xl font-semibold">{course.titulo}</h3>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <Panel listOfCourses={listOfCoursesSeparatedByCategories} />
       </section>
     </>
   )

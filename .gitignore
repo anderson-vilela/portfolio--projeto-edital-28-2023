@@ -37,4 +37,8 @@ next-env.d.ts
 
 *.Identifier
 
+# local env files
 .env
+
+# local files
+todolist.md

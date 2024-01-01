@@ -6,13 +6,14 @@ import { FaClock } from 'react-icons/fa6'
 import { HiUsers } from 'react-icons/hi2'
 
 const Card = ({
+  id,
   capa,
   titulo,
   parceiros,
   matriculados,
   duracao,
   avaliacao,
-  id,
+  resumo,
 }: Pick<
   APIDataType,
   | 'capa'
@@ -22,34 +23,27 @@ const Card = ({
   | 'duracao'
   | 'avaliacao'
   | 'id'
+  | 'resumo'
 >) => {
-  const formatTitle = (text: string, maxLength: number) => {
-    if (text.length > maxLength) {
-      return text.slice(0, maxLength).replace(/$/, '...')
-    } else {
-      return text
-    }
-  }
-
   return (
-    <div className="flex items-center justify-between gap-5 rounded-[20px] bg-tw-neutral-100 p-5">
-      <div className="relative flex h-[120px] w-[120px] items-center justify-center overflow-hidden rounded-[20px] bg-tw-neutral-300">
+    <div key={id} className="grid gap-3">
+      <div className="relative h-[200px] w-full overflow-hidden rounded-[20px]">
         <Image
           src={capa}
-          alt={`Capa do Módulo: ${titulo}`}
-          className="object-cover"
+          alt={`Capa do curso: ${titulo}`}
           quality={50}
+          sizes="(max-width: 768px) 100vw, 33vw"
+          priority
           fill
-          sizes="(max-width: 768px) 100vw, 280px"
         />
       </div>
-      <div className="flex max-w-[280px] flex-col justify-center">
-        <h2 className="text-[20px] font-semibold">{formatTitle(titulo, 50)}</h2>
-        <span className="text-[13px] font-semibold text-tw-primary-color-light">
+      <div>
+        <h2 className="text-[25px] font-semibold">{titulo}</h2>
+        <span className="text-[13px] text-tw-primary-color-light">
           {parceiros}
         </span>
       </div>
-      <div className="flex flex-1 items-center justify-between px-2">
+      <div className="flex items-center justify-between">
         <div className="flex items-center justify-center gap-2">
           <div className="h-7 w-7 text-tw-primary-color-light">
             <HiUsers className="h-full w-full" />
@@ -69,12 +63,13 @@ const Card = ({
           <span className="text-[17px] font-normal">{avaliacao}</span>
         </div>
       </div>
-      <div className="flex items-center justify-center">
+      <div>{resumo.replace(/ Ver mais$/, '...')}</div>
+      <div className="mt-1 flex justify-end">
         <Link
           href={`/courses/${id}`}
-          className="rounded-[20px] bg-tw-secundary-color-light px-[28px] py-[8px] text-[20px] font-semibold text-tw-neutral-0 duration-300 hover:bg-tw-secundary-color"
+          className="text-[18px] font-semibold text-tw-secundary-color-light duration-300 hover:text-tw-secundary-color-dark hover:underline"
         >
-          Ver módulo
+          Ver mais
         </Link>
       </div>
     </div>
