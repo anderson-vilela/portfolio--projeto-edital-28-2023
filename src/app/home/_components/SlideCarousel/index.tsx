@@ -48,7 +48,7 @@ const SlideCarousel = () => {
             src={slideLogoAvasus}
             quality={100}
             alt="Slide 1 - Logo AVASUS"
-            className="drop-shadow-[1px_1px_1px_rgba(0,0,0,0.3)]"
+            className="object-cover drop-shadow-[1px_1px_1px_rgba(0,0,0,0.3)]"
           />
           <div className="h-[2px] w-40 rounded-full bg-white" />
           <h2 className="font-light text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,1)]">

@@ -7,7 +7,7 @@ const Skeleton = () => {
       <Image
         src={loadingSlide}
         alt="Carregando Slide"
-        className="animate-pulse"
+        className="animate-pulse object-cover"
       />
     </div>
   )

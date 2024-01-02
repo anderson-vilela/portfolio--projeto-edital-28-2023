@@ -112,6 +112,7 @@ const Panel = ({ listOfCourses }: PanelProps) => {
                   src={capa}
                   alt={`Capa do curso: ${titulo}`}
                   quality={50}
+                  className="object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"
                   priority
                   fill
