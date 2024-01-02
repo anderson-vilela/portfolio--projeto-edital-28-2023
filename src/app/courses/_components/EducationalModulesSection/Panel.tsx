@@ -170,7 +170,7 @@ const Panel = ({ listOfCourses }: PanelProps) => {
         )}
       </div>
       <div className="mb-[200px] mt-20 flex flex-col items-center">
-        <nav className="inline-block overflow-hidden rounded-[10px] border border-tw-secundary-color-light/25">
+        <nav className="inline-block overflow-hidden rounded-[10px] border border-tw-secundary-color-light/25 bg-tw-neutral-100">
           <ul className="flex items-center justify-center text-[16px] font-semibold text-tw-secundary-color-light">
             {arrayForPagination.map((_, index) => {
               const count = index + 1
