@@ -1,8 +1,11 @@
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
+import Stars from '@/components/Stars'
 import { APIDataType } from '@/types/TypesAPI'
 import Image from 'next/image'
 import Link from 'next/link'
+import { FaCalendarCheck, FaClock } from 'react-icons/fa6'
+import { HiUsers } from 'react-icons/hi2'
 
 const GetCourseDetails = async (id: number): Promise<APIDataType> => {
   const response = await fetch(
@@ -27,6 +30,12 @@ type CourseDetailsProps = {
 
 const CourseDetails = async ({ params }: CourseDetailsProps) => {
   const course = await GetCourseDetails(params.id)
+
+  const formatStringDate = (text: string) => {
+    const [day, month, year] = text.split('/')
+
+    return `Desde ${day.padStart(2, '0')}/${month.padStart(2, '0')}/${year}`
+  }
 
   return (
     <>
@@ -86,10 +95,46 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
             Informações Gerais do Curso
           </h2>
           <div className="mt-[45px] flex items-center justify-between">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div className="flex items-center justify-center gap-2">
+              <div className="h-6 w-6 text-tw-primary-color-light">
+                <FaClock className="h-full w-full" />
+              </div>
+              <span className="text-[18px] font-bold">
+                {course.duracao.replace('h', ' horas')}
+              </span>
+            </div>
+            <div className="flex items-center justify-center gap-2">
+              <div className="h-6 w-6 text-tw-primary-color-light">
+                <FaCalendarCheck className="h-full w-full" />
+              </div>
+              <span className="text-[18px] font-bold">
+                {formatStringDate(course.criado_em)}
+              </span>
+            </div>
+            <div className="flex items-center justify-center gap-2">
+              <div className="h-7 w-7 text-tw-primary-color-light">
+                <HiUsers className="h-full w-full" />
+              </div>
+              <span className="text-[18px] font-bold">
+                {`${course.matriculados.toLocaleString(
+                  'pt-BR',
+                )} alunos matriculados`}
+              </span>
+            </div>
+            <div className="flex items-center justify-center gap-2">
+              <Stars
+                rating={course.avaliacao}
+                className={{
+                  mainDivStyle: 'gap-2',
+                }}
+              />
+              <span className="text-[18px] font-bold">
+                {course.avaliacao}{' '}
+                {`(${course.numero_avaliacoes.toLocaleString(
+                  'pt-BR',
+                )}  avaliações)`}
+              </span>
+            </div>
           </div>
           <div className="mt-[45px]">
             <h3 className="text-center text-[25px] font-semibold text-tw-primary-color">
