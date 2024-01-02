@@ -8,6 +8,7 @@ import { useState } from 'react'
 import { FaClock } from 'react-icons/fa6'
 import { HiUsers } from 'react-icons/hi2'
 import { ListOfCoursesType } from '.'
+import Pagination from '../Pagination'
 
 type SearchResultsType = {
   resultsOnPage: number
@@ -35,7 +36,7 @@ const Panel = ({ listOfCourses }: PanelProps) => {
   let coursesToView: APIDataType[] | null = null
   let searchResults: SearchResultsType = null
   let numberOfPages: number | null = null
-  let arrayForPagination: number[] = []
+  let listOfPages: number[] = []
 
   if (listOfCoursesToView?.courses) {
     coursesToView = listOfCoursesToView?.courses.slice(
@@ -53,7 +54,7 @@ const Panel = ({ listOfCourses }: PanelProps) => {
 
     numberOfPages = Math.ceil(listOfCoursesToView.courses.length / 6)
 
-    arrayForPagination = Array.from({ length: numberOfPages }, (_, i) => i + 1)
+    listOfPages = Array.from({ length: numberOfPages }, (_, i) => i + 1)
   }
 
   const handleTab = (category: string) => {
@@ -169,81 +170,11 @@ const Panel = ({ listOfCourses }: PanelProps) => {
           ),
         )}
       </div>
-      <div className="mb-[200px] mt-20 flex flex-col items-center">
-        <nav className="inline-block overflow-hidden rounded-[10px] border border-tw-secundary-color-light/25 bg-tw-neutral-100">
-          <ul className="flex items-center justify-center text-[16px] font-semibold text-tw-secundary-color-light">
-            {arrayForPagination.map((_, index) => {
-              const count = index + 1
-
-              if (count === currentPage) {
-                return (
-                  <li
-                    key={count}
-                    onClick={() => handleChangePage(count)}
-                    className="cursor-pointer bg-tw-primary-color px-2 py-1 text-white duration-300 hover:bg-tw-primary-color-dark"
-                  >
-                    {count}
-                  </li>
-                )
-              }
-
-              if (count > currentPage - 4 && count < currentPage + 4) {
-                return (
-                  <li
-                    key={count}
-                    onClick={() => handleChangePage(count)}
-                    className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
-                  >
-                    {count}
-                  </li>
-                )
-              }
-
-              if (count === currentPage - 4) {
-                return (
-                  <>
-                    <li
-                      key={count}
-                      onClick={() => handleChangePage(currentPage - 1)}
-                      className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
-                    >
-                      Anterior
-                    </li>
-                    <li
-                      key={count}
-                      className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
-                    >
-                      ...
-                    </li>
-                  </>
-                )
-              }
-
-              if (count === currentPage + 4) {
-                return (
-                  <>
-                    <li
-                      key={count}
-                      className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
-                    >
-                      ...
-                    </li>
-                    <li
-                      key={count}
-                      onClick={() => handleChangePage(currentPage + 1)}
-                      className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
-                    >
-                      Próximo
-                    </li>
-                  </>
-                )
-              }
-
-              return null
-            })}
-          </ul>
-        </nav>
-      </div>
+      <Pagination
+        listOfPages={listOfPages}
+        currentPage={currentPage}
+        handleChangePage={handleChangePage}
+      />
     </div>
   )
 }

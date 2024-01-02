@@ -1,18 +1,17 @@
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-import EducationalModulesSection from '../_components/EducationalModulesSection'
 
 type CourseDetailsProps = {
-  id: number
+  params: {
+    id: number
+  }
 }
 
-const CourseDetails = ({ id }: CourseDetailsProps) => {
+const CourseDetails = ({ params }: CourseDetailsProps) => {
   return (
     <>
       <Header />
-      <main className="flex-1">
-        
-      </main>
+      <main className="flex-1">{params.id}</main>
       <Footer />
     </>
   )
