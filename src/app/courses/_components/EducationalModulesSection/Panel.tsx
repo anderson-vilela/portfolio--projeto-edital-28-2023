@@ -58,14 +58,14 @@ const Panel = ({ listOfCourses }: PanelProps) => {
   }
 
   const handleTab = (category: string) => {
+    scrollTo({ top: 0, left: 0, behavior: 'smooth' })
     setCurrentTab(category)
     setCurrentPage(1)
-    scrollTo({ top: 0, left: 0, behavior: 'smooth' })
   }
 
   const handleChangePage = (number: number) => {
-    setCurrentPage(number)
     scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    setCurrentPage(number)
   }
 
   return (

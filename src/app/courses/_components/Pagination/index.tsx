@@ -1,3 +1,5 @@
+import { v4 } from 'uuid'
+
 type PaginationProps = {
   listOfPages: number[]
   currentPage: number
@@ -19,7 +21,7 @@ const Pagination = ({
             if (count === currentPage) {
               return (
                 <li
-                  key={count}
+                  key={v4()}
                   onClick={() => handleChangePage(count)}
                   className="cursor-pointer bg-tw-primary-color px-2 py-1 text-white duration-300 hover:bg-tw-primary-color-dark"
                 >
@@ -31,49 +33,45 @@ const Pagination = ({
             if (count > currentPage - 4 && count < currentPage + 4) {
               if (count === 1) {
                 return (
-                  <>
-                    <li
-                      key={count}
+                  <li key={v4()} className="flex items-center">
+                    <div
                       onClick={() => handleChangePage(currentPage - 1)}
                       className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
                     >
                       Anterior
-                    </li>
-                    <li
-                      key={count}
+                    </div>
+                    <div
                       onClick={() => handleChangePage(count)}
                       className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
                     >
                       {count}
-                    </li>
-                  </>
+                    </div>
+                  </li>
                 )
               }
 
               if (count === listOfPages.length) {
                 return (
-                  <>
-                    <li
-                      key={count}
+                  <li key={v4()} className="flex items-center">
+                    <div
                       onClick={() => handleChangePage(count)}
                       className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
                     >
                       {count}
-                    </li>
-                    <li
-                      key={count}
+                    </div>
+                    <div
                       onClick={() => handleChangePage(currentPage + 1)}
                       className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
                     >
                       Próximo
-                    </li>
-                  </>
+                    </div>
+                  </li>
                 )
               }
 
               return (
                 <li
-                  key={count}
+                  key={v4()}
                   onClick={() => handleChangePage(count)}
                   className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
                 >
@@ -84,41 +82,33 @@ const Pagination = ({
 
             if (count === 1) {
               return (
-                <>
-                  <li
-                    key={count}
+                <li key={v4()} className="flex items-center">
+                  <div
                     onClick={() => handleChangePage(currentPage - 1)}
                     className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
                   >
                     Anterior
-                  </li>
-                  <li
-                    key={count}
-                    className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
-                  >
+                  </div>
+                  <div className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25">
                     ...
-                  </li>
-                </>
+                  </div>
+                </li>
               )
             }
 
             if (count === listOfPages.length) {
               return (
-                <>
-                  <li
-                    key={count}
-                    className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
-                  >
+                <li key={v4()} className="flex items-center">
+                  <div className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25">
                     ...
-                  </li>
-                  <li
-                    key={count}
+                  </div>
+                  <div
                     onClick={() => handleChangePage(currentPage + 1)}
                     className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
                   >
                     Próximo
-                  </li>
-                </>
+                  </div>
+                </li>
               )
             }
 

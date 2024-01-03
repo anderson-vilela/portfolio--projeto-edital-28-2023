@@ -192,7 +192,7 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
                   <Image
                     src={credit.capa}
                     alt={credit.titulo}
-                    className="bg-cover object-cover"
+                    className="object-contain"
                     height={400}
                     width={300}
                   />
