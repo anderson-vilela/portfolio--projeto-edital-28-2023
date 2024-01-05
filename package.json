@@ -10,6 +10,8 @@
     "server": "cd ../api && npm run start"
   },
   "dependencies": {
+    "highcharts": "^11.2.0",
+    "highcharts-react-official": "^3.2.1",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",

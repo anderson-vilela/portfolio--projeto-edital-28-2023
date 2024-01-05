@@ -36,7 +36,7 @@ const TransparencyPage = async () => {
         </h1>
         <div className="container mb-[200px] mt-8 grid grid-cols-2 gap-8">
           <SectionGeneralData generalData={transparency.dados_gerais} />
-          <PieChart />
+          <PieChart data={transparency.usuarios_por_curso} />
           <MapChart />
         </div>
       </main>
