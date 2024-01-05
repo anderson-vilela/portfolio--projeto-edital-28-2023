@@ -6,23 +6,10 @@ import HighchartsReact from 'highcharts-react-official'
 
 type PieChartProps = {
   data: UsuariosPorCurso[]
+  colorsForChart: string[]
 }
 
-const createColors = (colorsSetSize: number, mainList: string[]) => {
-  const colorsSetData = new Set(mainList)
-
-  while (colorsSetData.size < colorsSetSize) {
-    const hexColor = Math.floor(Math.random() * 16777215).toString(16)
-    colorsSetData.add(hexColor)
-  }
-
-  return Array.from(colorsSetData)
-}
-
-const PieChart = ({ data: dataProps }: PieChartProps) => {
-  const mainColors = ['#ffffff', '#d2202c', '#707070', '#2f2e41']
-  const colorsForChart = createColors(dataProps.length, mainColors)
-
+const PieChart = ({ data: dataProps, colorsForChart }: PieChartProps) => {
   const sumUsuarios = dataProps.reduce((accumulator, { usuarios }) => {
     const total = Number(accumulator) + Number(usuarios)
 
@@ -52,7 +39,7 @@ const PieChart = ({ data: dataProps }: PieChartProps) => {
       {
         name: 'Percentual',
         colorByPoint: true,
-        data: dataProps.map((data, index) => {
+        data: dataProps.map((data) => {
           const yNumber = Number(
             ((data.usuarios / sumUsuarios) * 100).toFixed(2),
           )

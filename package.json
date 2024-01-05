@@ -10,6 +10,7 @@
     "server": "cd ../api && npm run start"
   },
   "dependencies": {
+    "@highcharts/map-collection": "^2.1.0",
     "highcharts": "^11.2.0",
     "highcharts-react-official": "^3.2.1",
     "next": "14.0.4",
