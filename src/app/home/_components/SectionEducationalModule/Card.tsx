@@ -43,8 +43,10 @@ const Card = ({
           sizes="(max-width: 768px) 100vw, 280px"
         />
       </div>
-      <div className="flex max-w-[280px] flex-col justify-center">
-        <h2 className="text-[20px] font-semibold">{formatTitle(titulo, 50)}</h2>
+      <div className="flex max-w-[280px] flex-col justify-center gap-4">
+        <h2 className="text-[20px] font-semibold leading-7">
+          {formatTitle(titulo, 50)}
+        </h2>
         <span className="text-[13px] font-semibold text-tw-primary-color-light">
           {parceiros}
         </span>
@@ -66,7 +68,9 @@ const Card = ({
         </div>
         <div className="flex items-center justify-center gap-2">
           <Stars rating={avaliacao} />
-          <span className="text-[17px] font-normal">{avaliacao}</span>
+          <span className="text-[17px] font-normal">
+            {avaliacao.replace('.', ',')}
+          </span>
         </div>
       </div>
       <div className="flex items-center justify-center">

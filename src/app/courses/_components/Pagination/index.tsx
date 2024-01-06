@@ -30,7 +30,7 @@ const Pagination = ({
               )
             }
 
-            if (count > currentPage - 4 && count < currentPage + 4) {
+            if (count > currentPage - 5 && count < currentPage + 5) {
               if (count === 1) {
                 return (
                   <li key={v4()} className="flex items-center">
@@ -38,7 +38,7 @@ const Pagination = ({
                       onClick={() => handleChangePage(currentPage - 1)}
                       className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
                     >
-                      Anterior
+                      {'< Anterior'}
                     </div>
                     <div
                       onClick={() => handleChangePage(count)}
@@ -63,7 +63,7 @@ const Pagination = ({
                       onClick={() => handleChangePage(currentPage + 1)}
                       className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
                     >
-                      Próximo
+                      {'Próximo >'}
                     </div>
                   </li>
                 )
@@ -87,7 +87,7 @@ const Pagination = ({
                     onClick={() => handleChangePage(currentPage - 1)}
                     className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
                   >
-                    Anterior
+                    {'< Anterior'}
                   </div>
                   <div className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25">
                     ...
@@ -106,7 +106,7 @@ const Pagination = ({
                     onClick={() => handleChangePage(currentPage + 1)}
                     className="cursor-pointer border-r px-2 py-1 text-base font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
                   >
-                    Próximo
+                    {'Próximo >'}
                   </div>
                 </li>
               )

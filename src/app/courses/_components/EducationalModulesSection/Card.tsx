@@ -61,7 +61,9 @@ const Card = ({
         </div>
         <div className="flex items-center justify-center gap-2">
           <Stars rating={avaliacao} />
-          <span className="text-[17px] font-normal">{avaliacao}</span>
+          <span className="text-[17px] font-normal">
+            {avaliacao.replace('.', ',')}
+          </span>
         </div>
       </div>
       <div>{resumo.replace(/ Ver mais$/, '...')}</div>

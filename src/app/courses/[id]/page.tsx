@@ -129,7 +129,7 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
                 }}
               />
               <span className="text-[18px] font-bold">
-                {course.avaliacao}{' '}
+                {course.avaliacao.replace('.', ',')}{' '}
                 {`(${course.numero_avaliacoes.toLocaleString(
                   'pt-BR',
                 )}  avaliações)`}
@@ -140,7 +140,7 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
             <h3 className="text-center text-[25px] font-semibold text-tw-primary-color">
               Sobre o curso
             </h3>
-            <p className="mt-8 text-justify text-base font-normal text-black">
+            <p className="mt-8 text-justify text-base font-normal leading-tight text-black">
               {course.sobre}
             </p>
           </div>
@@ -154,7 +154,7 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
                   <h4 className="text-base font-bold text-black">
                     Objetivo Geral
                   </h4>
-                  <p className="mt-3">{course.objetivo_geral}</p>
+                  <p className="mt-3 leading-tight">{course.objetivo_geral}</p>
                 </div>
               )}
               {course.objetivo_especifico && (
@@ -162,7 +162,7 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
                   <h4 className="text-base font-bold text-black">
                     Objetivos Específicos
                   </h4>
-                  <p className="mt-3 text-black">
+                  <p className="mt-3 leading-tight text-black">
                     {course.objetivo_especifico}
                   </p>
                 </div>

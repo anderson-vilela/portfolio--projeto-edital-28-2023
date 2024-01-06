@@ -77,7 +77,7 @@ const Panel = ({ listOfCourses }: PanelProps) => {
               key={category}
               onClick={() => handleTab(category)}
               data-active-tab={currentTab === category}
-              className="cursor-pointer border-b-[3px] border-transparent pb-2 hover:border-b-[3px] hover:border-tw-secundary-color-light data-[active-tab=true]:border-b-[3px] data-[active-tab=true]:border-tw-secundary-color-light "
+              className="cursor-pointer border-b-[3px] border-transparent pb-2 hover:border-b-[3px] hover:border-tw-secundary-color-light data-[active-tab=true]:border-b-[3px] data-[active-tab=true]:border-tw-secundary-color-light data-[active-tab=true]:text-tw-secundary-color-light"
             >
               {category}
             </li>
@@ -151,7 +151,9 @@ const Panel = ({ listOfCourses }: PanelProps) => {
                       mainDivStyle: 'gap-0',
                     }}
                   />
-                  <span className="text-[17px] font-normal">{avaliacao}</span>
+                  <span className="text-[17px] font-normal">
+                    {avaliacao.replace('.', ',')}
+                  </span>
                 </div>
               </div>
               <div>
@@ -164,7 +166,7 @@ const Panel = ({ listOfCourses }: PanelProps) => {
                   href={`/courses/${id}`}
                   className="text-[18px] font-semibold text-tw-secundary-color-light duration-300 hover:text-tw-secundary-color-dark hover:underline"
                 >
-                  Ver mais
+                  Ver curso
                 </Link>
               </div>
             </div>
