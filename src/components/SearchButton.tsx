@@ -2,11 +2,12 @@
 
 import { useRouter } from 'next/navigation'
 import React from 'react'
-import { HiMagnifyingGlass } from 'react-icons/hi2'
+import { HiMagnifyingGlass, HiMagnifyingGlassCircle } from 'react-icons/hi2'
 
 const SearchButton = () => {
   const router = useRouter()
   const [search, setSearch] = React.useState('')
+  const [isOpenSearchBar, setIsOpenSearchBar] = React.useState(false)
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(event.target.value)
@@ -23,9 +24,16 @@ const SearchButton = () => {
 
   return (
     <form onKeyUp={handleSubmit}>
+      <button
+        type="button"
+        className="flex items-center justify-center sm:hidden"
+        onClick={() => setIsOpenSearchBar(!isOpenSearchBar)}
+      >
+        <HiMagnifyingGlassCircle className="mr-5 text-4xl text-tw-secundary-color-light duration-300 hover:text-tw-primary-color-dark" />
+      </button>
       <label
         htmlFor="header-search-mobile"
-        className="tw-default:w-[140px] tw-default:px-2 group flex w-[240px] items-center rounded-[16px] border-2 border-tw-secundary-color-dark/20 bg-transparent px-4 text-tw-secundary-color-light duration-300 hover:cursor-text hover:border-tw-primary-color-dark xl:w-[200px] 2xl:hidden"
+        className="group flex w-[240px] items-center rounded-[16px] border-2 border-tw-secundary-color-dark/20 bg-transparent px-4 text-tw-secundary-color-light duration-300 hover:cursor-text hover:border-tw-primary-color-dark max-sm:hidden tw-default:w-[140px] tw-default:px-2 xl:w-[200px] 2xl:hidden"
       >
         <div className="tw-default:hidden xl:block">
           <HiMagnifyingGlass className="text-tw-secundary-color duration-300 group-hover:text-tw-primary-color-dark" />
