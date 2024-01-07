@@ -2,8 +2,8 @@ import logoAvaSus from '@/assets/img/logo-avasus.svg'
 import NavLink from '@/fragments/NavLink'
 import Image from 'next/image'
 import Link from 'next/link'
-import { HiMagnifyingGlass } from 'react-icons/hi2'
 import { RiMenuLine } from 'react-icons/ri'
+import SearchButton from './SearchButton'
 
 const Header = () => {
   return (
@@ -47,30 +47,7 @@ const Header = () => {
               </li>
             </ul>
           </nav>
-          <form action="" method="get">
-            <label
-              htmlFor="header-search"
-              className="group flex w-[130px] items-center rounded-[16px] border-2 border-tw-secundary-color-dark/20 bg-transparent text-tw-secundary-color-light duration-300 hover:cursor-text hover:border-tw-primary-color-dark 2xl:w-[240px] 2xl:px-2 min-[1800px]:rounded-[20px] min-[1920px]:w-[21.875rem] min-[1920px]:px-4"
-            >
-              <div className="hidden min-[1920px]:block">
-                <HiMagnifyingGlass className="text-tw-secundary-color duration-300 group-hover:text-tw-primary-color-dark" />
-              </div>
-              <input
-                type="search"
-                name="search"
-                id="header-search"
-                placeholder="Pesquisar..."
-                className="w-full bg-transparent px-2 py-1 text-base text-tw-secundary-color-light outline-none duration-300 placeholder:font-normal placeholder:text-tw-secundary-color group-hover:placeholder:text-tw-primary-color-dark 2xl:hidden min-[1800px]:p-2"
-              />
-              <input
-                type="search"
-                name="search"
-                id="header-search"
-                placeholder="Buscar por um assunto..."
-                className="hidden w-full bg-transparent px-2 py-1 text-base text-tw-secundary-color-light outline-none duration-300 placeholder:font-normal placeholder:text-tw-secundary-color group-hover:placeholder:text-tw-primary-color-dark 2xl:block min-[1800px]:p-2"
-              />
-            </label>
-          </form>
+          <SearchButton />
           <div className="flex items-center gap-4">
             <button className="rounded-[16px] border border-tw-secundary-color-light bg-transparent px-4 py-1 font-semibold text-tw-secundary-color-light duration-300 hover:border-tw-primary-color-dark hover:bg-tw-primary-color-dark hover:text-tw-neutral-0 min-[1800px]:rounded-[20px] min-[1800px]:px-7 min-[1800px]:py-2">
               Entrar
