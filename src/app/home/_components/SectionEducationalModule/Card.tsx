@@ -32,8 +32,8 @@ const Card = ({
   }
 
   return (
-    <div className="flex items-center justify-between gap-5 rounded-[20px] bg-tw-neutral-100 p-5">
-      <div className="relative flex h-[120px] w-[120px] items-center justify-center overflow-hidden rounded-[20px] bg-tw-neutral-300">
+    <div className="mx-auto flex w-full flex-col items-center justify-between gap-5 rounded-[20px] bg-tw-neutral-100 p-5 last:max-lg:col-span-2 last:max-lg:max-w-[336px] last:max-md:max-w-[288px] last:max-sm:col-span-1 last:max-sm:max-w-full xl:flex-row">
+      <div className="relative flex w-full items-center justify-center overflow-hidden rounded-[20px] bg-tw-neutral-300 max-xl:h-[250px] xl:h-full xl:min-h-[120px] xl:w-[120px]">
         <Image
           src={capa}
           alt={`Capa do Módulo: ${titulo}`}
@@ -43,15 +43,18 @@ const Card = ({
           sizes="(max-width: 768px) 100vw, 280px"
         />
       </div>
-      <div className="flex max-w-[280px] flex-col justify-center gap-4">
-        <h2 className="text-[20px] font-semibold leading-7">
+      <div className="flex flex-col justify-center gap-4 xl:max-w-[280px]">
+        <h2 className="text-[20px] font-semibold leading-7 max-xl:hidden">
           {formatTitle(titulo, 50)}
+        </h2>
+        <h2 className="text-[20px] font-semibold leading-7 xl:hidden">
+          {titulo}
         </h2>
         <span className="text-[13px] font-semibold text-tw-primary-color-light">
           {parceiros}
         </span>
       </div>
-      <div className="flex flex-1 items-center justify-between px-2">
+      <div className="flex flex-1 items-center justify-between px-2 max-xl:grid max-xl:grid-cols-2 max-xl:flex-col max-xl:gap-4">
         <div className="flex items-center justify-center gap-2">
           <div className="h-7 w-7 text-tw-primary-color-light">
             <HiUsers className="h-full w-full" />
@@ -66,14 +69,14 @@ const Card = ({
           </div>
           <span className="text-[17px] font-normal">{duracao}</span>
         </div>
-        <div className="flex items-center justify-center gap-2">
+        <div className="flex items-center justify-center gap-2 max-xl:col-span-2">
           <Stars rating={avaliacao} />
           <span className="text-[17px] font-normal">
             {avaliacao.replace('.', ',')}
           </span>
         </div>
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center max-xl:mt-8">
         <Link
           href={`/courses/${id}`}
           className="rounded-[20px] bg-tw-secundary-color-light px-[28px] py-[8px] text-[20px] font-semibold text-tw-neutral-0 duration-300 hover:bg-tw-secundary-color"

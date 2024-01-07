@@ -18,14 +18,14 @@ const Header = () => {
               className="h-[22px] w-[100px] xl:h-[33px] xl:w-[150px] 2xl:h-[44px] 2xl:w-[200px]"
             />
           </Link>
-          <div className="h-[44px] w-[2px] rounded-full bg-tw-neutral-300 min-[1100px]:hidden" />
-          <div className="flex items-center gap-2 min-[1100px]:hidden">
+          <div className="tw-default:hidden h-[44px] w-[2px] rounded-full bg-tw-neutral-300" />
+          <div className="tw-default:hidden flex items-center gap-2">
             <RiMenuLine className="text-xl" />
             <span>Menu</span>
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <nav className="hidden pr-2 min-[1100px]:block xl:pr-4 min-[1850px]:py-2 min-[1920px]:px-8 min-[1920px]:py-4">
+          <nav className="tw-default:block hidden pr-2 xl:pr-4 min-[1850px]:py-2 min-[1920px]:px-8 min-[1920px]:py-4">
             <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 min-[1800px]:gap-x-9">
               <li>
                 <NavLink href="/home">Início</NavLink>

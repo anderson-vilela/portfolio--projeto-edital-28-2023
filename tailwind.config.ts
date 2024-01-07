@@ -10,8 +10,17 @@ const config: Config = {
           sm: '640px',
           md: '768px',
           lg: '1024px',
-          xl: '1110px',
+          xl: '1280px',
         },
+        padding: {
+          DEFAULT: '1rem',
+          md: '2rem',
+          lg: '3rem',
+          xl: '85px',
+        },
+      },
+      screens: {
+        'tw-default': '1110px',
       },
       colors: {
         'tw-primary-color': {

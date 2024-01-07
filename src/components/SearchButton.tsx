@@ -25,9 +25,9 @@ const SearchButton = () => {
     <form onKeyUp={handleSubmit}>
       <label
         htmlFor="header-search-mobile"
-        className="group flex w-[240px] items-center rounded-[16px] border-2 border-tw-secundary-color-dark/20 bg-transparent px-4 text-tw-secundary-color-light duration-300 hover:cursor-text hover:border-tw-primary-color-dark min-[1100px]:w-[140px] min-[1100px]:px-2 xl:w-[200px] 2xl:hidden"
+        className="tw-default:w-[140px] tw-default:px-2 group flex w-[240px] items-center rounded-[16px] border-2 border-tw-secundary-color-dark/20 bg-transparent px-4 text-tw-secundary-color-light duration-300 hover:cursor-text hover:border-tw-primary-color-dark xl:w-[200px] 2xl:hidden"
       >
-        <div className="min-[1100px]:hidden xl:block">
+        <div className="tw-default:hidden xl:block">
           <HiMagnifyingGlass className="text-tw-secundary-color duration-300 group-hover:text-tw-primary-color-dark" />
         </div>
         <input

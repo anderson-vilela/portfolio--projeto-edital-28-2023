@@ -22,7 +22,7 @@ const Panel = ({
   return (
     <div className="mt-8">
       <nav>
-        <ul className="flex gap-8 text-[20px] font-semibold">
+        <ul className="flex gap-8 text-[20px] font-semibold max-md:flex-wrap max-md:justify-center">
           <li
             onClick={() => setCurrentTab('most-popular')}
             data-active-tab={currentTab === 'most-popular'}
@@ -49,7 +49,7 @@ const Panel = ({
       <div className="mt-8">
         <div
           data-active-tab={currentTab === 'most-popular'}
-          className="hidden gap-8 data-[active-tab=true]:grid"
+          className="hidden gap-8 data-[active-tab=true]:grid max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1"
         >
           {mostPopularCourses.map((course) => (
             <Card
@@ -66,7 +66,7 @@ const Panel = ({
         </div>
         <div
           data-active-tab={currentTab === 'top-rated'}
-          className="hidden gap-8 data-[active-tab=true]:grid"
+          className="hidden grid-cols-1 gap-8 data-[active-tab=true]:grid max-xl:grid-cols-3 max-lg:grid-cols-2"
         >
           {topRatedCourses.map((course) => (
             <Card
@@ -83,7 +83,7 @@ const Panel = ({
         </div>
         <div
           data-active-tab={currentTab === 'latest'}
-          className="hidden gap-8 data-[active-tab=true]:grid"
+          className="hidden grid-cols-1 gap-8 data-[active-tab=true]:grid max-xl:grid-cols-3 max-lg:grid-cols-2"
         >
           {latestCourses.map((course) => (
             <Card

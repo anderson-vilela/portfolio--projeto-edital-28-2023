@@ -4,7 +4,7 @@ const SectionPartners = () => {
       <h2 className="text-center text-[30px] font-semibold text-tw-primary-color">
         Parceiros
       </h2>
-      <div className="mt-[30px] grid grid-cols-4 gap-8 rounded-[20px] bg-tw-neutral-100 px-[32px] py-[26px] text-center">
+      <div className="mt-[30px] grid grid-cols-4 gap-8 rounded-[20px] bg-tw-neutral-100 px-[32px] py-[26px] text-center max-lg:grid-cols-2 max-sm:grid-cols-1">
         <div>
           <h3 className="text-25px">Governo do RN</h3>
           <p className="mt-4 text-[18px] font-semibold text-tw-secundary-color-light">

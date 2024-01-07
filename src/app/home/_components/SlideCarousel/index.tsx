@@ -48,10 +48,10 @@ const SlideCarousel = () => {
             src={slideLogoAvasus}
             quality={100}
             alt="Slide 1 - Logo AVASUS"
-            className="object-cover drop-shadow-[1px_1px_1px_rgba(0,0,0,0.3)]"
+            className="object-cover drop-shadow-[1px_1px_1px_rgba(0,0,0,0.3)] max-lg:w-[400px] max-sm:w-[300px]"
           />
           <div className="h-[2px] w-40 rounded-full bg-white" />
-          <h2 className="font-light text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,1)]">
+          <h2 className="font-light text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,1)] max-lg:text-[1.5rem] max-sm:text-[1rem]">
             Conhecimento Aberto em Saúde
           </h2>
         </div>
@@ -66,11 +66,13 @@ const SlideCarousel = () => {
           alt="Slide 2"
           className="object-cover grayscale-[70%]"
           quality={100}
+          fill
           priority
         />
         <div className="absolute left-0 top-0 z-10 flex h-full w-full flex-col items-center justify-center gap-4">
-          <h2 className="text-[5rem] leading-[6rem] text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,1)]">
-            Vírus respiratórios emergentes,
+          <h2 className="text-center text-[5rem] font-light leading-[6rem] text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,1)] max-2xl:text-[4rem] max-xl:text-[3rem] max-xl:leading-[4rem] max-lg:text-[2rem] max-lg:font-semibold max-sm:text-[1.5rem] max-sm:leading-[2rem]">
+            Vírus respiratórios <br className="hidden max-xl:block" />
+            emergentes,
             <br />
             incluindo o COVID-19
           </h2>
@@ -86,10 +88,11 @@ const SlideCarousel = () => {
           alt="Slide 3"
           className="object-cover grayscale-[70%]"
           quality={100}
+          fill
           priority
         />
         <div className="absolute left-0 top-0 z-10 flex h-full w-full flex-col items-center justify-center gap-4">
-          <h2 className="text-[5rem] font-light text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,1)]">
+          <h2 className="text-center text-[5rem] font-light text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,1)] max-2xl:text-[4rem] max-xl:text-[3rem] max-lg:text-[2rem] max-lg:font-semibold max-sm:text-[1.5rem] max-sm:leading-[2rem]">
             Especialização PEPSUS
           </h2>
         </div>
