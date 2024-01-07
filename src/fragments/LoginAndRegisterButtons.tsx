@@ -9,8 +9,8 @@ const LoginAndRegisterButtons = () => {
       >
         <GrUserExpert className="text-[26px] text-tw-secundary-color-light" />
         <div
-          className="absolute right-0 top-[-10px] hidden w-[240px] rounded-b-2xl border-2 border-tw-primary-color-dark
-        bg-tw-neutral-0 group-hover:grid"
+          className="absolute right-0 top-[-10px] z-50 hidden w-[240px] rounded-b-2xl border-2
+        border-tw-primary-color-dark bg-tw-neutral-0 group-hover:grid"
         >
           <span className="block break-keep bg-tw-neutral-200 p-4 text-center font-bold text-tw-primary-color-dark">
             Login / Cadastro

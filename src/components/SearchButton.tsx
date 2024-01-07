@@ -7,7 +7,6 @@ import { HiMagnifyingGlass, HiMagnifyingGlassCircle } from 'react-icons/hi2'
 const SearchButton = () => {
   const router = useRouter()
   const [search, setSearch] = React.useState('')
-  const [isOpenSearchBar, setIsOpenSearchBar] = React.useState(false)
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(event.target.value)
@@ -24,13 +23,37 @@ const SearchButton = () => {
 
   return (
     <form onKeyUp={handleSubmit}>
-      <button
-        type="button"
-        className="flex items-center justify-center sm:hidden"
-        onClick={() => setIsOpenSearchBar(!isOpenSearchBar)}
-      >
+      <div className="group flex items-center justify-center sm:hidden">
         <HiMagnifyingGlassCircle className="mr-5 text-4xl text-tw-secundary-color-light duration-300 hover:text-tw-primary-color-dark" />
-      </button>
+        <div
+          className="absolute left-0 top-0 z-50 hidden w-full rounded-b-2xl border-2
+        border-tw-primary-color-dark bg-tw-neutral-0 group-hover:grid"
+        >
+          <span className="block break-keep bg-tw-neutral-200 p-4 text-center font-bold text-tw-primary-color-dark">
+            Pesquisa
+          </span>
+          <hr />
+          <div className="px-8 py-4">
+            <label
+              htmlFor="header-search-small-mobile"
+              className="group flex w-full items-center rounded-[16px] border-2 border-tw-secundary-color-dark/20 bg-transparent px-4 py-2 text-tw-secundary-color-light duration-300 hover:cursor-pointer"
+            >
+              <div className="">
+                <HiMagnifyingGlass className="text-tw-secundary-color duration-300" />
+              </div>
+              <input
+                type="text"
+                name="search"
+                id="header-search-small-mobile"
+                placeholder="Buscar por um assunto..."
+                value={search}
+                onChange={onChange}
+                className="w-full bg-transparent px-2 py-1 text-base text-tw-secundary-color-light outline-none duration-300 placeholder:font-normal placeholder:text-tw-secundary-color"
+              />
+            </label>
+          </div>
+        </div>
+      </div>
       <label
         htmlFor="header-search-mobile"
         className="group flex w-[240px] items-center rounded-[16px] border-2 border-tw-secundary-color-dark/20 bg-transparent px-4 text-tw-secundary-color-light duration-300 hover:cursor-text hover:border-tw-primary-color-dark max-sm:hidden tw-default:w-[140px] tw-default:px-2 xl:w-[200px] 2xl:hidden"
