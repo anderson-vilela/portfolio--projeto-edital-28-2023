@@ -31,7 +31,7 @@ const Header = () => {
           <div className="h-[44px] w-[2px] rounded-full bg-tw-neutral-300 max-md:h-[40px] tw-default:hidden" />
           <NavBarMobile />
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 max-sm:gap-0">
           <NavBarDesktop />
           <SearchButton />
           <LoginAndRegisterButtons />

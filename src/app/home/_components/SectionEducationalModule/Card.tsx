@@ -47,10 +47,10 @@ const Card = ({
         <h2 className="text-[20px] font-semibold leading-7 max-xl:hidden">
           {formatTitle(titulo, 50)}
         </h2>
-        <h2 className="text-[20px] font-semibold leading-7 xl:hidden">
+        <h2 className="text-[20px] font-semibold leading-7 max-sm:text-center xl:hidden">
           {titulo}
         </h2>
-        <span className="text-[13px] font-semibold text-tw-primary-color-light">
+        <span className="text-[13px] font-semibold text-tw-primary-color-light max-sm:text-center">
           {parceiros}
         </span>
       </div>

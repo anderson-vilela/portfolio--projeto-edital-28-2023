@@ -5,12 +5,12 @@ const LoginAndRegisterButtons = () => {
     <div>
       <div
         id="buttons-mobile"
-        className="group relative flex items-center gap-4 md:hidden"
+        className="group flex items-center gap-4 sm:relative md:hidden"
       >
         <GrUserExpert className="text-[26px] text-tw-secundary-color-light" />
         <div
-          className="absolute right-0 top-[-10px] z-50 hidden w-[240px] rounded-b-2xl border-2
-        border-tw-primary-color-dark bg-tw-neutral-0 group-hover:grid"
+          className="absolute right-0 z-50 hidden rounded-b-2xl border-2 border-tw-primary-color-dark bg-tw-neutral-0 group-hover:grid max-sm:top-0
+        max-sm:w-full sm:top-[-10px] sm:w-[240px]"
         >
           <span className="block break-keep bg-tw-neutral-200 p-4 text-center font-bold text-tw-primary-color-dark">
             Login / Cadastro

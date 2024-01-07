@@ -66,7 +66,7 @@ const Panel = ({
         </div>
         <div
           data-active-tab={currentTab === 'top-rated'}
-          className="hidden grid-cols-1 gap-8 data-[active-tab=true]:grid max-xl:grid-cols-3 max-lg:grid-cols-2"
+          className="hidden gap-8 data-[active-tab=true]:grid max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1"
         >
           {topRatedCourses.map((course) => (
             <Card
@@ -83,7 +83,7 @@ const Panel = ({
         </div>
         <div
           data-active-tab={currentTab === 'latest'}
-          className="hidden grid-cols-1 gap-8 data-[active-tab=true]:grid max-xl:grid-cols-3 max-lg:grid-cols-2"
+          className="hidden gap-8 data-[active-tab=true]:grid max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1"
         >
           {latestCourses.map((course) => (
             <Card

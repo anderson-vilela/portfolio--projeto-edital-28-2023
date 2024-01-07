@@ -43,15 +43,15 @@ const SlideCarousel = () => {
           quality={100}
           priority
         />
-        <div className="absolute left-0 top-0 z-10 flex h-full w-full flex-col items-center justify-center gap-4">
+        <div className="absolute left-0 top-0 z-10 flex h-full w-full flex-col items-center justify-center gap-4 max-sm:gap-2">
           <Image
             src={slideLogoAvasus}
             quality={100}
             alt="Slide 1 - Logo AVASUS"
-            className="object-cover drop-shadow-[1px_1px_1px_rgba(0,0,0,0.3)] max-lg:w-[400px] max-sm:w-[300px]"
+            className="object-cover drop-shadow-[1px_1px_1px_rgba(0,0,0,0.3)] max-lg:w-[400px] max-sm:w-[10rem]"
           />
           <div className="h-[2px] w-40 rounded-full bg-white" />
-          <h2 className="font-light text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,1)] max-lg:text-[1.5rem] max-sm:text-[1rem]">
+          <h2 className="font-light text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,1)] max-lg:text-[1.5rem] max-sm:text-[0.5rem]">
             Conhecimento Aberto em Saúde
           </h2>
         </div>
@@ -70,7 +70,7 @@ const SlideCarousel = () => {
           priority
         />
         <div className="absolute left-0 top-0 z-10 flex h-full w-full flex-col items-center justify-center gap-4">
-          <h2 className="text-center text-[5rem] font-light leading-[6rem] text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,1)] max-2xl:text-[4rem] max-xl:text-[3rem] max-xl:leading-[4rem] max-lg:text-[2rem] max-lg:font-semibold max-sm:text-[1.5rem] max-sm:leading-[2rem]">
+          <h2 className="text-center text-[5rem] font-light leading-[6rem] text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,1)] max-2xl:text-[4rem] max-xl:text-[3rem] max-xl:leading-[4rem] max-lg:text-[2rem] max-lg:font-semibold  max-sm:text-[0.75rem] max-sm:leading-[2rem]">
             Vírus respiratórios <br className="hidden max-xl:block" />
             emergentes,
             <br />
@@ -92,7 +92,7 @@ const SlideCarousel = () => {
           priority
         />
         <div className="absolute left-0 top-0 z-10 flex h-full w-full flex-col items-center justify-center gap-4">
-          <h2 className="text-center text-[5rem] font-light text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,1)] max-2xl:text-[4rem] max-xl:text-[3rem] max-lg:text-[2rem] max-lg:font-semibold max-sm:text-[1.5rem] max-sm:leading-[2rem]">
+          <h2 className="text-center text-[5rem] font-light text-white drop-shadow-[1px_1px_2px_rgba(0,0,0,1)] max-2xl:text-[4rem] max-xl:text-[3rem] max-lg:text-[2rem] max-lg:font-semibold max-sm:text-[0.75rem] max-sm:leading-[2rem]">
             Especialização PEPSUS
           </h2>
         </div>
@@ -100,13 +100,13 @@ const SlideCarousel = () => {
 
       <button
         onClick={handlePrevSlide}
-        className="absolute left-8 top-1/2 z-20 flex h-[4.5rem] w-[4.5rem] cursor-pointer items-center justify-center rounded-full bg-slate-800/30"
+        className="absolute left-8 top-1/2 z-20 flex h-[4.5rem] w-[4.5rem] cursor-pointer items-center justify-center rounded-full bg-slate-800/30 max-sm:hidden"
       >
         <Image src={arrowLeft} alt="Botão Slide Anterior" />
       </button>
       <button
         onClick={handleNextSlide}
-        className="absolute right-8 top-1/2 z-20 flex h-[4.5rem] w-[4.5rem] cursor-pointer items-center justify-center rounded-full bg-slate-800/30"
+        className="absolute right-8 top-1/2 z-20 flex h-[4.5rem] w-[4.5rem] cursor-pointer items-center justify-center rounded-full bg-slate-800/30 max-sm:hidden"
       >
         <Image src={arrowRight} alt="Botão Slide Seguinte" />
       </button>
