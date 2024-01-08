@@ -41,9 +41,9 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
     <>
       <Header />
       <main className="flex-1">
-        <div className="relative mt-[100px] min-h-[270px] p-8">
+        <div className="relative mt-[100px] min-h-[270px] p-8 max-sm:p-1">
           <nav className="container">
-            <ul className="flex items-center gap-2 font-semibold text-tw-neutral-200">
+            <ul className="text-tw-text-16 flex flex-wrap items-center gap-2 font-semibold text-tw-neutral-200">
               <li>
                 <Link
                   className="drop-shadow-[2px_2px_1px_rgba(0,0,0,0.5)]"
@@ -82,24 +82,24 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
             fill
           />
           <div className="container">
-            <h1 className="mt-[60px] text-[40px] font-bold leading-none text-tw-neutral-0 drop-shadow-[2px_2px_1px_rgba(0,0,0,0.5)]">
+            <h1 className="text-tw-text-40 mt-[60px] font-bold leading-none text-tw-neutral-0 drop-shadow-[2px_2px_1px_rgba(0,0,0,0.5)] max-lg:text-center">
               {course.titulo}
             </h1>
-            <span className="mt-8 block font-serif text-[25px] text-tw-neutral-0 drop-shadow-[2px_2px_1px_rgba(0,0,0,0.5)]">
+            <span className="text-tw-text-26 mt-8 block font-serif text-tw-neutral-0 drop-shadow-[2px_2px_1px_rgba(0,0,0,0.5)] max-lg:text-center">
               {course.parceiros}
             </span>
           </div>
         </div>
         <section className="container mt-8">
-          <h2 className="text-center text-[40px] font-semibold text-tw-primary-color">
+          <h2 className="text-tw-text-40 text-center font-semibold text-tw-primary-color">
             Informações Gerais do Curso
           </h2>
-          <div className="mt-[45px] flex items-center justify-between">
+          <div className="mt-[45px] flex flex-wrap items-center justify-between gap-4 max-lg:justify-center">
             <div className="flex items-center justify-center gap-2">
               <div className="h-6 w-6 text-tw-primary-color-light">
                 <FaClock className="h-full w-full" />
               </div>
-              <span className="text-[18px] font-bold">
+              <span className="text-tw-text-18 font-bold">
                 {course.duracao.replace('h', ' horas')}
               </span>
             </div>
@@ -107,7 +107,7 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
               <div className="h-6 w-6 text-tw-primary-color-light">
                 <FaCalendarCheck className="h-full w-full" />
               </div>
-              <span className="text-[18px] font-bold">
+              <span className="text-tw-text-18 font-bold">
                 {formatStringDate(course.criado_em)}
               </span>
             </div>
@@ -115,43 +115,49 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
               <div className="h-7 w-7 text-tw-primary-color-light">
                 <HiUsers className="h-full w-full" />
               </div>
-              <span className="text-[18px] font-bold">
-                {`${course.matriculados.toLocaleString(
-                  'pt-BR',
-                )} alunos matriculados`}
-              </span>
+              <p className="text-tw-text-18 font-bold">
+                {`${course.matriculados.toLocaleString('pt-BR')} alunos `}
+                <span className="text-tw-text-18 font-bold max-lg:hidden">
+                  matriculados
+                </span>
+              </p>
             </div>
             <div className="flex items-center justify-center gap-2">
               <Stars
                 rating={course.avaliacao}
                 className={{
-                  mainDivStyle: 'gap-2',
+                  mainDivStyle: 'gap-2 max-sm:gap-1',
+                  fullStarStyle: 'max-sm:text-[16px]',
+                  halfStarStyle: 'max-sm:text-[18px]',
+                  emptyStarStyle: 'max-sm:text-[16px]',
                 }}
               />
-              <span className="text-[18px] font-bold">
+              <p className="text-tw-text-18 font-bold">
                 {course.avaliacao.replace('.', ',')}{' '}
-                {`(${course.numero_avaliacoes.toLocaleString(
-                  'pt-BR',
-                )}  avaliações)`}
-              </span>
+                <span className="text-tw-text-18 font-bold max-sm:hidden">
+                  {`(${course.numero_avaliacoes.toLocaleString(
+                    'pt-BR',
+                  )}  avaliações)`}
+                </span>
+              </p>
             </div>
           </div>
           <div className="mt-[45px]">
-            <h3 className="text-center text-[25px] font-semibold text-tw-primary-color">
+            <h3 className="text-tw-text-26 text-center font-semibold text-tw-primary-color">
               Sobre o curso
             </h3>
-            <p className="mt-8 text-justify text-base font-normal leading-tight text-black">
+            <p className="text-tw-text-16 mt-8 text-justify font-normal leading-tight text-black">
               {course.sobre}
             </p>
           </div>
           {course.objetivo_geral || course.objetivo_especifico ? (
             <div className="mt-[30px]">
-              <h3 className="text-center text-[25px] font-semibold text-tw-primary-color">
+              <h3 className="text-tw-text-26 text-center font-semibold text-tw-primary-color">
                 Objetivos
               </h3>
               {course.objetivo_geral && (
                 <div className="mt-[30px]">
-                  <h4 className="text-base font-bold text-black">
+                  <h4 className="text-tw-text-16 font-bold text-black">
                     Objetivo Geral
                   </h4>
                   <p className="mt-3 leading-tight">{course.objetivo_geral}</p>
@@ -159,7 +165,7 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
               )}
               {course.objetivo_especifico && (
                 <div className="mt-[30px]">
-                  <h4 className="text-base font-bold text-black">
+                  <h4 className="text-tw-text-16 font-bold text-black">
                     Objetivos Específicos
                   </h4>
                   <p className="mt-3 leading-tight text-black">
@@ -171,23 +177,23 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
           ) : null}
           {course.recursos_educacionais && (
             <div className="mt-[30px]">
-              <h3 className="text-center text-[25px] font-semibold text-tw-primary-color">
+              <h3 className="text-tw-text-26 text-center font-semibold text-tw-primary-color">
                 Recursos educacionais
               </h3>
-              <p className="mt-8 text-center text-base font-normal text-black">
+              <p className="text-tw-text-16 mt-8 text-center font-normal text-black">
                 {course.recursos_educacionais}
               </p>
             </div>
           )}
           <div className="mb-[140px] mt-16">
-            <h3 className="text-center text-[25px] font-semibold text-tw-primary-color">
+            <h3 className="text-tw-text-26 text-center font-semibold text-tw-primary-color">
               Créditos
             </h3>
-            <div className="mt-8 grid grid-cols-4 content-center gap-10">
+            <div className="mt-8 grid grid-cols-4 content-center gap-10 max-lg:grid-cols-3 max-sm:grid-cols-1 max-sm:gap-2">
               {course.creditos.map((credit, index) => (
                 <div
                   key={index}
-                  className="flex h-full w-full items-center justify-center"
+                  className="flex h-full w-full items-center justify-center max-sm:mx-auto max-sm:w-2/3"
                 >
                   <Image
                     src={credit.capa}

@@ -48,7 +48,7 @@ const SearchButton = () => {
                 placeholder="Buscar por um assunto..."
                 value={search}
                 onChange={onChange}
-                className="w-full bg-transparent px-2 py-1 text-base text-tw-secundary-color-light outline-none duration-300 placeholder:font-normal placeholder:text-tw-secundary-color"
+                className="max-sm:placeholder:text-tw-text-14 w-full bg-transparent px-2 py-1 text-base text-tw-secundary-color-light outline-none duration-300 placeholder:font-normal placeholder:text-tw-secundary-color"
               />
             </label>
           </div>
