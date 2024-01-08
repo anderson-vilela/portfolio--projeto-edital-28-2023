@@ -9,11 +9,11 @@ const NavBarMobile = () => {
         <span>Menu</span>
       </div>
       <nav className="absolute left-0 top-0 z-50 hidden rounded-b-2xl border-2 bg-tw-neutral-0 duration-300 group-hover:block group-hover:border-tw-primary-color-dark max-sm:w-full">
-        <span className="max-sm:text-tw-text-14 block bg-tw-neutral-200 p-4 text-center font-bold text-tw-primary-color-dark">
+        <span className="block bg-tw-neutral-200 p-4 text-center font-bold text-tw-primary-color-dark max-sm:text-tw-text-14">
           Menu
         </span>
         <hr />
-        <ul className="max-sm:text-tw-text-16 max-sm:text-center">
+        <ul className="max-sm:text-center max-sm:text-tw-text-16">
           <li className="hover:bg-text-tw-primary-color-dark px-8 py-4 duration-300">
             <NavLink href="/home">Início</NavLink>
           </li>

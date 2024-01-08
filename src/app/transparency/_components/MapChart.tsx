@@ -11,7 +11,9 @@ type MapChartProps = {
 }
 
 const MapChart = ({ data: dataProps }: MapChartProps) => {
-  highchartsMap(Highcharts)
+  if (typeof Highcharts === 'object') {
+    highchartsMap(Highcharts)
+  }
 
   const dataList = dataProps?.map(
     ({ estados: uf, usuarios_totais: usuariosPorEstado }) => [

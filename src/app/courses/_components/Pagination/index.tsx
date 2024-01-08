@@ -23,7 +23,7 @@ const Pagination = ({
 
   return (
     <div className="mb-[200px] mt-20 flex flex-col items-center">
-      <div className="w-full">
+      <div className="w-full sm:hidden">
         <div className="flex w-full items-center justify-between">
           <button
             type="button"
@@ -90,7 +90,7 @@ const Pagination = ({
         )}
       </div>
       <nav className="inline-block overflow-hidden rounded-[10px] border border-tw-secundary-color-light/25 bg-tw-neutral-100 max-sm:hidden">
-        <ul className="text-tw-text-16 flex items-center justify-center font-semibold text-tw-secundary-color-light">
+        <ul className="flex items-center justify-center text-tw-text-16 font-semibold text-tw-secundary-color-light">
           {listOfPages.map((_, index) => {
             const count = index + 1
 
@@ -112,13 +112,13 @@ const Pagination = ({
                   <li key={v4()} className="flex items-center">
                     <div
                       onClick={() => handleChangePage(currentPage - 1)}
-                      className="text-tw-text-16 cursor-pointer border-r px-2 py-1 font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
+                      className="cursor-pointer border-r px-2 py-1 text-tw-text-16 font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
                     >
                       {'< Anterior'}
                     </div>
                     <div
                       onClick={() => handleChangePage(count)}
-                      className="text-tw-text-16 cursor-pointer border-r px-2 py-1 font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
+                      className="cursor-pointer border-r px-2 py-1 text-tw-text-16 font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
                     >
                       {count}
                     </div>
@@ -131,13 +131,13 @@ const Pagination = ({
                   <li key={v4()} className="flex items-center">
                     <div
                       onClick={() => handleChangePage(count)}
-                      className="text-tw-text-16 cursor-pointer border-r px-2 py-1 font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
+                      className="cursor-pointer border-r px-2 py-1 text-tw-text-16 font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
                     >
                       {count}
                     </div>
                     <div
                       onClick={() => handleChangePage(currentPage + 1)}
-                      className="text-tw-text-16 cursor-pointer border-r px-2 py-1 font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
+                      className="cursor-pointer border-r px-2 py-1 text-tw-text-16 font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
                     >
                       {'Próximo >'}
                     </div>
@@ -149,7 +149,7 @@ const Pagination = ({
                 <li
                   key={v4()}
                   onClick={() => handleChangePage(count)}
-                  className="text-tw-text-16 cursor-pointer border-r px-2 py-1 font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
+                  className="cursor-pointer border-r px-2 py-1 text-tw-text-16 font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
                 >
                   {count}
                 </li>
@@ -161,11 +161,11 @@ const Pagination = ({
                 <li key={v4()} className="flex items-center">
                   <div
                     onClick={() => handleChangePage(currentPage - 1)}
-                    className="text-tw-text-16 cursor-pointer border-r px-2 py-1 font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
+                    className="cursor-pointer border-r px-2 py-1 text-tw-text-16 font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
                   >
                     {'< Anterior'}
                   </div>
-                  <div className="text-tw-text-16 cursor-pointer border-r px-2 py-1 font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25">
+                  <div className="cursor-pointer border-r px-2 py-1 text-tw-text-16 font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25">
                     ...
                   </div>
                 </li>
@@ -175,12 +175,12 @@ const Pagination = ({
             if (count === listOfPages.length) {
               return (
                 <li key={v4()} className="flex items-center">
-                  <div className="text-tw-text-16 cursor-pointer border-r px-2 py-1 font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25">
+                  <div className="cursor-pointer border-r px-2 py-1 text-tw-text-16 font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25">
                     ...
                   </div>
                   <div
                     onClick={() => handleChangePage(currentPage + 1)}
-                    className="text-tw-text-16 cursor-pointer border-r px-2 py-1 font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
+                    className="cursor-pointer border-r px-2 py-1 text-tw-text-16 font-semibold text-tw-secundary-color-light duration-300 hover:bg-tw-secundary-color-light/25"
                   >
                     {'Próximo >'}
                   </div>

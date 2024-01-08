@@ -29,7 +29,7 @@ const SectionGeneralData = ({ generalData }: SectionGeneralDataProps) => {
           </div>
           <div>
             <span className="block text-center text-[30px] font-semibold text-tw-primary-color">
-              {generalData.usuarios_registrados.toLocaleString('pt-BR')}
+              {generalData?.usuarios_registrados.toLocaleString('pt-BR')}
             </span>
           </div>
         </div>

@@ -79,7 +79,7 @@ const Card = ({
       <div className="flex items-center justify-center max-xl:mt-8">
         <Link
           href={`/courses/${id}`}
-          className="text-tw-text-20 rounded-[20px] bg-tw-secundary-color-light px-[28px] py-[8px] font-semibold text-tw-neutral-0 duration-300 hover:bg-tw-secundary-color"
+          className="rounded-[20px] bg-tw-secundary-color-light px-[28px] py-[8px] text-tw-text-20 font-semibold text-tw-neutral-0 duration-300 hover:bg-tw-secundary-color"
         >
           Ver módulo
         </Link>

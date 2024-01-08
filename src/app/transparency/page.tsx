@@ -7,7 +7,7 @@ import PieChart from './_components/PieChart'
 import SectionGeneralData from './_components/SectionGeneralData'
 
 type PromiseTransparencyType = {
-  data: TransparencyType & { colorsForChart: string[] }
+  data: TransparencyType
   colorsForChart: string[]
 }
 

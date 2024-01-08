@@ -51,7 +51,7 @@ const EducationalModulesSection = async () => {
   return (
     <>
       <section className="container">
-        <h1 className="text-tw-text-40 mt-[30px] text-center font-semibold text-tw-primary-color">
+        <h1 className="mt-[30px] text-center text-tw-text-40 font-semibold text-tw-primary-color">
           Módulos Educacionais
         </h1>
         <Panel listOfCourses={listOfCoursesSeparatedByCategories} />

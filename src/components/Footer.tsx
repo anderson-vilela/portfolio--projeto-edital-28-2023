@@ -9,7 +9,7 @@ const Footer = () => {
     <footer>
       <div className="bg-tw-primary-color">
         <div className="pt-8">
-          <p className="text-tw-text-26 text-center font-semibold text-tw-neutral-0">
+          <p className="text-center text-tw-text-26 font-semibold text-tw-neutral-0">
             Realização
           </p>
         </div>
@@ -35,7 +35,7 @@ const Footer = () => {
           <div>
             <h4 className="text-tw-text-26 text-tw-neutral-0">Links Úteis</h4>
             <nav className="mt-4">
-              <ul className="text-tw-text-18 grid gap-2 text-tw-neutral-0">
+              <ul className="grid gap-2 text-tw-text-18 text-tw-neutral-0">
                 <li>
                   <NavLink href="/home">Início</NavLink>
                 </li>

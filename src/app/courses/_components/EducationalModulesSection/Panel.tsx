@@ -71,7 +71,7 @@ const Panel = ({ listOfCourses }: PanelProps) => {
   return (
     <div className="mt-8">
       <nav>
-        <ul className="text-tw-text-20 flex flex-wrap gap-x-8 gap-y-4 font-semibold max-lg:justify-center">
+        <ul className="flex flex-wrap gap-x-8 gap-y-4 text-tw-text-20 font-semibold max-lg:justify-center">
           {categorys.map((category) => (
             <li
               key={category}

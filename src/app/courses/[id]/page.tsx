@@ -43,7 +43,7 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
       <main className="flex-1">
         <div className="relative mt-[100px] min-h-[270px] p-8 max-sm:p-1">
           <nav className="container">
-            <ul className="text-tw-text-16 flex flex-wrap items-center gap-2 font-semibold text-tw-neutral-200">
+            <ul className="flex flex-wrap items-center gap-2 text-tw-text-16 font-semibold text-tw-neutral-200">
               <li>
                 <Link
                   className="drop-shadow-[2px_2px_1px_rgba(0,0,0,0.5)]"
@@ -82,16 +82,16 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
             fill
           />
           <div className="container">
-            <h1 className="text-tw-text-40 mt-[60px] font-bold leading-none text-tw-neutral-0 drop-shadow-[2px_2px_1px_rgba(0,0,0,0.5)] max-lg:text-center">
+            <h1 className="mt-[60px] text-tw-text-40 font-bold leading-none text-tw-neutral-0 drop-shadow-[2px_2px_1px_rgba(0,0,0,0.5)] max-lg:text-center">
               {course.titulo}
             </h1>
-            <span className="text-tw-text-26 mt-8 block font-serif text-tw-neutral-0 drop-shadow-[2px_2px_1px_rgba(0,0,0,0.5)] max-lg:text-center">
+            <span className="mt-8 block font-serif text-tw-text-26 text-tw-neutral-0 drop-shadow-[2px_2px_1px_rgba(0,0,0,0.5)] max-lg:text-center">
               {course.parceiros}
             </span>
           </div>
         </div>
         <section className="container mt-8">
-          <h2 className="text-tw-text-40 text-center font-semibold text-tw-primary-color">
+          <h2 className="text-center text-tw-text-40 font-semibold text-tw-primary-color">
             Informações Gerais do Curso
           </h2>
           <div className="mt-[45px] flex flex-wrap items-center justify-between gap-4 max-lg:justify-center">
@@ -143,16 +143,16 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
             </div>
           </div>
           <div className="mt-[45px]">
-            <h3 className="text-tw-text-26 text-center font-semibold text-tw-primary-color">
+            <h3 className="text-center text-tw-text-26 font-semibold text-tw-primary-color">
               Sobre o curso
             </h3>
-            <p className="text-tw-text-16 mt-8 text-justify font-normal leading-tight text-black">
+            <p className="mt-8 text-justify text-tw-text-16 font-normal leading-tight text-black">
               {course.sobre}
             </p>
           </div>
           {course.objetivo_geral || course.objetivo_especifico ? (
             <div className="mt-[30px]">
-              <h3 className="text-tw-text-26 text-center font-semibold text-tw-primary-color">
+              <h3 className="text-center text-tw-text-26 font-semibold text-tw-primary-color">
                 Objetivos
               </h3>
               {course.objetivo_geral && (
@@ -177,16 +177,16 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
           ) : null}
           {course.recursos_educacionais && (
             <div className="mt-[30px]">
-              <h3 className="text-tw-text-26 text-center font-semibold text-tw-primary-color">
+              <h3 className="text-center text-tw-text-26 font-semibold text-tw-primary-color">
                 Recursos educacionais
               </h3>
-              <p className="text-tw-text-16 mt-8 text-center font-normal text-black">
+              <p className="mt-8 text-center text-tw-text-16 font-normal text-black">
                 {course.recursos_educacionais}
               </p>
             </div>
           )}
           <div className="mb-[140px] mt-16">
-            <h3 className="text-tw-text-26 text-center font-semibold text-tw-primary-color">
+            <h3 className="text-center text-tw-text-26 font-semibold text-tw-primary-color">
               Créditos
             </h3>
             <div className="mt-8 grid grid-cols-4 content-center gap-10 max-lg:grid-cols-3 max-sm:grid-cols-1 max-sm:gap-2">
