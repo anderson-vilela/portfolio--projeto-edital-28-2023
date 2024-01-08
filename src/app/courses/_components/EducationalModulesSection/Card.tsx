@@ -70,7 +70,7 @@ const Card = ({
       <div className="mt-1 flex justify-end">
         <Link
           href={`/courses/${id}`}
-          className="text-[18px] font-semibold text-tw-secundary-color-light duration-300 hover:text-tw-secundary-color-dark hover:underline"
+          className="text-tw-text-18 font-semibold text-tw-secundary-color-light duration-300 hover:text-tw-secundary-color-dark hover:underline"
         >
           Ver mais
         </Link>

@@ -71,7 +71,7 @@ const Panel = ({ listOfCourses }: PanelProps) => {
   return (
     <div className="mt-8">
       <nav>
-        <ul className="flex flex-wrap gap-x-8 gap-y-4 text-[20px] font-semibold">
+        <ul className="text-tw-text-20 flex flex-wrap gap-x-8 gap-y-4 font-semibold max-lg:justify-center">
           {categorys.map((category) => (
             <li
               key={category}
@@ -86,15 +86,15 @@ const Panel = ({ listOfCourses }: PanelProps) => {
       </nav>
       <div className="mt-6">
         {!searchResults && (
-          <span className="text-base italic">
+          <span className="text-tw-text-16 italic">
             Ops, nenhum curso foi identificado...
           </span>
         )}
         {searchResults && (
-          <span className="text-base italic">{`${searchResults.resultsOnPage} de ${searchResults.totalResults} resultados`}</span>
+          <span className="text-tw-text-16 italic">{`${searchResults.resultsOnPage} de ${searchResults.totalResults} resultados`}</span>
         )}
       </div>
-      <div className="mt-8 grid grid-cols-3 gap-8">
+      <div className="mt-8 grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-md:grid-cols-1 max-md:gap-16">
         {coursesToView?.map(
           ({
             id,
@@ -114,23 +114,24 @@ const Panel = ({ listOfCourses }: PanelProps) => {
                   quality={50}
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"
-                  priority
                   fill
                 />
               </div>
               <div className="grid gap-2">
-                <h2 className="text-[25px] font-semibold">{titulo}</h2>
-                <span className="text-[13px] font-semibold text-tw-primary-color-light">
+                <h2 className="text-tw-text-26 font-semibold max-lg:text-justify max-md:text-center">
+                  {titulo}
+                </h2>
+                <span className="text-tw-text-14 font-semibold text-tw-primary-color-light max-lg:text-center">
                   {parceiros}
                 </span>
               </div>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between max-xl:flex-col max-md:flex-row max-md:justify-center max-md:gap-8 max-sm:flex-col max-sm:gap-2">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center justify-center gap-2">
                     <div className="h-5 w-5 text-tw-primary-color-light">
                       <HiUsers className="h-full w-full" />
                     </div>
-                    <span className="text-[17px] font-normal">
+                    <span className="text-tw-text-18 font-normal">
                       {matriculados.toLocaleString('pt-BR')}
                     </span>
                   </div>
@@ -138,7 +139,9 @@ const Panel = ({ listOfCourses }: PanelProps) => {
                     <div className="h-4 w-4 text-tw-primary-color-light">
                       <FaClock className="h-full w-full" />
                     </div>
-                    <span className="text-[17px] font-normal">{duracao}</span>
+                    <span className="text-tw-text-18 font-normal">
+                      {duracao}
+                    </span>
                   </div>
                 </div>
                 <div className="flex items-center justify-center gap-2">
@@ -151,20 +154,20 @@ const Panel = ({ listOfCourses }: PanelProps) => {
                       mainDivStyle: 'gap-0',
                     }}
                   />
-                  <span className="text-[17px] font-normal">
+                  <span className="text-tw-text-18 font-normal">
                     {avaliacao.replace('.', ',')}
                   </span>
                 </div>
               </div>
               <div>
-                <p className="text-[15px] font-medium">
+                <p className="text-tw-text-16 font-medium max-lg:text-justify">
                   {resumo.replace(/ Ver mais$/, '...')}
                 </p>
               </div>
               <div className="flex justify-end">
                 <Link
                   href={`/courses/${id}`}
-                  className="text-[18px] font-semibold text-tw-secundary-color-light duration-300 hover:text-tw-secundary-color-dark hover:underline"
+                  className="text-tw-text-18 font-semibold text-tw-secundary-color-light duration-300 hover:text-tw-secundary-color-dark hover:underline"
                 >
                   Ver curso
                 </Link>

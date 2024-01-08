@@ -12,23 +12,33 @@
   }
 
   h1 {
-    @apply text-[2.5rem] font-semibold;
+    font-size: clamp(1.5rem, 1.3364rem + 0.9697vw, 2.5rem);
+    font-weight: 600;
   }
 
   h2 {
-    @apply text-3xl font-semibold;
+    font-size: clamp(1.25rem, 1.1477rem + 0.6061vw, 1.875rem);
+    font-weight: 600;
   }
 
   h3 {
-    @apply text-2xl font-semibold;
+    font-size: clamp(1.125rem, 1.0534rem + 0.4242vw, 1.5625rem);
+    font-weight: 600;
   }
 
   h4 {
-    @apply text-xl font-semibold;
+    font-size: clamp(1rem, 0.9591rem + 0.2424vw, 1.25rem);
+    font-weight: 600;
+  }
+
+  p {
+    font-size: clamp(0.875rem, 0.8545rem + 0.1212vw, 1rem);
+    font-weight: 400;
   }
 
   span {
-    @apply text-sm;
+    font-size: clamp(0.75rem, 0.7295rem + 0.1212vw, 0.875rem);
+    font-weight: 400;
   }
 
   h1,
@@ -38,9 +48,5 @@
   p,
   span {
     @apply text-tw-neutral-400;
-  }
-
-  .main-content {
-    @apply mx-auto w-full sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1110px];
   }
 }

@@ -44,13 +44,13 @@ const Card = ({
         />
       </div>
       <div className="flex flex-col justify-center gap-4 xl:max-w-[280px]">
-        <h2 className="text-[20px] font-semibold leading-7 max-xl:hidden">
+        <h2 className="text-tw-text-20 font-semibold leading-7 max-xl:hidden">
           {formatTitle(titulo, 50)}
         </h2>
-        <h2 className="text-[20px] font-semibold leading-7 max-sm:text-center xl:hidden">
+        <h2 className="text-tw-text-20 font-semibold leading-7 max-sm:text-center xl:hidden">
           {titulo}
         </h2>
-        <span className="text-[13px] font-semibold text-tw-primary-color-light max-sm:text-center">
+        <span className="text-tw-text-14 font-semibold text-tw-primary-color-light max-sm:text-center">
           {parceiros}
         </span>
       </div>
@@ -59,7 +59,7 @@ const Card = ({
           <div className="h-7 w-7 text-tw-primary-color-light">
             <HiUsers className="h-full w-full" />
           </div>
-          <span className="text-[17px] font-normal">
+          <span className="text-tw-text-16 font-normal">
             {matriculados.toLocaleString('pt-BR')}
           </span>
         </div>
@@ -67,11 +67,11 @@ const Card = ({
           <div className="h-6 w-6 text-tw-primary-color-light">
             <FaClock className="h-full w-full" />
           </div>
-          <span className="text-[17px] font-normal">{duracao}</span>
+          <span className="text-tw-text-16 font-normal">{duracao}</span>
         </div>
         <div className="flex items-center justify-center gap-2 max-xl:col-span-2">
           <Stars rating={avaliacao} />
-          <span className="text-[17px] font-normal">
+          <span className="text-tw-text-16 font-normal">
             {avaliacao.replace('.', ',')}
           </span>
         </div>
@@ -79,7 +79,7 @@ const Card = ({
       <div className="flex items-center justify-center max-xl:mt-8">
         <Link
           href={`/courses/${id}`}
-          className="rounded-[20px] bg-tw-secundary-color-light px-[28px] py-[8px] text-[20px] font-semibold text-tw-neutral-0 duration-300 hover:bg-tw-secundary-color"
+          className="text-tw-text-20 rounded-[20px] bg-tw-secundary-color-light px-[28px] py-[8px] font-semibold text-tw-neutral-0 duration-300 hover:bg-tw-secundary-color"
         >
           Ver módulo
         </Link>

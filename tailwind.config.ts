@@ -4,6 +4,15 @@ const config: Config = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
+      fontSize: {
+        'tw-text-40': 'clamp(1.75rem, 1.6273rem + 0.7273vw, 2.5rem)',
+        'tw-text-30': 'clamp(1.5rem, 1.4386rem + 0.3636vw, 1.875rem)',
+        'tw-text-26': 'clamp(1.25rem, 1.1886rem + 0.3636vw, 1.625rem)',
+        'tw-text-20': 'clamp(1.125rem, 1.1045rem + 0.1212vw, 1.25rem)',
+        'tw-text-18': 'clamp(1rem, 0.9795rem + 0.1212vw, 1.125rem)',
+        'tw-text-16': 'clamp(0.875rem, 0.8545rem + 0.1212vw, 1rem)',
+        'tw-text-14': 'clamp(0.75rem, 0.7295rem + 0.1212vw, 0.875rem)',
+      },
       container: {
         center: true,
         screens: {

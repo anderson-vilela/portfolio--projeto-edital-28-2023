@@ -22,7 +22,7 @@ const Panel = ({
   return (
     <div className="mt-8">
       <nav>
-        <ul className="flex gap-8 text-[20px] font-semibold max-md:flex-wrap max-md:justify-center">
+        <ul className="text-tw-text-20 flex gap-8 font-semibold max-md:flex-wrap max-md:justify-center max-sm:gap-4">
           <li
             onClick={() => setCurrentTab('most-popular')}
             data-active-tab={currentTab === 'most-popular'}

@@ -53,7 +53,7 @@ const SectionEducationalModule = async () => {
 
   return (
     <section className="container mt-[115px]">
-      <h2 className="text-center font-semibold text-tw-primary-color">
+      <h2 className="text-tw-text-30 text-center font-semibold text-tw-primary-color">
         Módulos Educacionais
       </h2>
       <Panel
@@ -64,7 +64,7 @@ const SectionEducationalModule = async () => {
       <div className="mt-16 flex items-center justify-center">
         <Link
           href={'/courses'}
-          className="inline-block rounded-[20px] bg-tw-secundary-color-light px-28 py-3 text-2xl font-semibold text-tw-neutral-0 duration-300 hover:bg-tw-secundary-color max-sm:px-8 max-sm:py-2 max-sm:text-center"
+          className="text-tw-text-26 inline-block rounded-[20px] bg-tw-secundary-color-light px-28 py-3 font-semibold text-tw-neutral-0 duration-300 hover:bg-tw-secundary-color max-sm:px-8 max-sm:py-2 max-sm:text-center"
         >
           Ver mais
         </Link>
