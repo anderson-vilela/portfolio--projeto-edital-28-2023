@@ -68,7 +68,7 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
                   / Módulos
                 </Link>
               </li>
-              <li className="text-tw-neutral-0 drop-shadow-[2px_2px_1px_rgba(0,0,0,0.5)]">
+              <li className="break-words text-tw-neutral-0 drop-shadow-[2px_2px_1px_rgba(0,0,0,0.5)]">
                 <Link href={`/courses/${params.id}`}>/ {course.titulo}</Link>
               </li>
             </ul>
@@ -82,10 +82,10 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
             fill
           />
           <div className="container">
-            <h1 className="mt-[60px] text-tw-text-40 font-bold leading-none text-tw-neutral-0 drop-shadow-[2px_2px_1px_rgba(0,0,0,0.5)] max-lg:text-center">
+            <h1 className="mt-[60px] break-words text-tw-text-40 font-bold leading-none text-tw-neutral-0 drop-shadow-[2px_2px_1px_rgba(0,0,0,0.5)] max-lg:text-center">
               {course.titulo}
             </h1>
-            <span className="mt-8 block font-serif text-tw-text-26 text-tw-neutral-0 drop-shadow-[2px_2px_1px_rgba(0,0,0,0.5)] max-lg:text-center">
+            <span className="mt-8 block break-words font-serif text-tw-text-26 text-tw-neutral-0 drop-shadow-[2px_2px_1px_rgba(0,0,0,0.5)] max-lg:text-center">
               {course.parceiros}
             </span>
           </div>
@@ -146,7 +146,7 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
             <h3 className="text-center text-tw-text-26 font-semibold text-tw-primary-color">
               Sobre o curso
             </h3>
-            <p className="mt-8 text-justify text-tw-text-16 font-normal leading-tight text-black">
+            <p className="mt-8 break-words text-justify text-tw-text-16 font-normal leading-tight text-black">
               {course.sobre}
             </p>
           </div>
@@ -160,7 +160,9 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
                   <h4 className="text-tw-text-16 font-bold text-black">
                     Objetivo Geral
                   </h4>
-                  <p className="mt-3 leading-tight">{course.objetivo_geral}</p>
+                  <p className="mt-3 break-words leading-tight">
+                    {course.objetivo_geral}
+                  </p>
                 </div>
               )}
               {course.objetivo_especifico && (
@@ -168,7 +170,7 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
                   <h4 className="text-tw-text-16 font-bold text-black">
                     Objetivos Específicos
                   </h4>
-                  <p className="mt-3 leading-tight text-black">
+                  <p className="mt-3 break-words leading-tight text-black">
                     {course.objetivo_especifico}
                   </p>
                 </div>
@@ -180,7 +182,7 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
               <h3 className="text-center text-tw-text-26 font-semibold text-tw-primary-color">
                 Recursos educacionais
               </h3>
-              <p className="mt-8 text-center text-tw-text-16 font-normal text-black">
+              <p className="mt-8 break-words text-center text-tw-text-16 font-normal text-black">
                 {course.recursos_educacionais}
               </p>
             </div>

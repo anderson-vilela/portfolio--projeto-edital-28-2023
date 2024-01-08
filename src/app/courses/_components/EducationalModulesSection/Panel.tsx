@@ -77,7 +77,7 @@ const Panel = ({ listOfCourses }: PanelProps) => {
               key={category}
               onClick={() => handleTab(category)}
               data-active-tab={currentTab === category}
-              className="cursor-pointer border-b-[3px] border-transparent pb-2 hover:border-b-[3px] hover:border-tw-secundary-color-light data-[active-tab=true]:border-b-[3px] data-[active-tab=true]:border-tw-secundary-color-light data-[active-tab=true]:text-tw-secundary-color-light"
+              className="cursor-pointer break-words border-b-[3px] border-transparent pb-2 hover:border-b-[3px] hover:border-tw-secundary-color-light data-[active-tab=true]:border-b-[3px] data-[active-tab=true]:border-tw-secundary-color-light data-[active-tab=true]:text-tw-secundary-color-light"
             >
               {category}
             </li>
@@ -118,10 +118,10 @@ const Panel = ({ listOfCourses }: PanelProps) => {
                 />
               </div>
               <div className="grid gap-2">
-                <h2 className="text-tw-text-26 font-semibold max-lg:text-justify max-md:text-center">
+                <h2 className="break-words text-tw-text-26 font-semibold max-lg:text-justify max-md:text-center">
                   {titulo}
                 </h2>
-                <span className="text-tw-text-14 font-semibold text-tw-primary-color-light max-lg:text-center">
+                <span className="break-words text-tw-text-14 font-semibold text-tw-primary-color-light max-lg:text-center">
                   {parceiros}
                 </span>
               </div>

@@ -44,13 +44,13 @@ const Card = ({
         />
       </div>
       <div className="flex flex-col justify-center gap-4 xl:max-w-[280px]">
-        <h2 className="text-tw-text-20 font-semibold leading-7 max-xl:hidden">
+        <h2 className="break-words text-tw-text-20 font-semibold leading-7 max-xl:hidden">
           {formatTitle(titulo, 50)}
         </h2>
-        <h2 className="text-tw-text-20 font-semibold leading-7 max-sm:text-center xl:hidden">
+        <h2 className="break-words text-tw-text-20 font-semibold leading-7 max-sm:text-center xl:hidden">
           {titulo}
         </h2>
-        <span className="text-tw-text-14 font-semibold text-tw-primary-color-light max-sm:text-center">
+        <span className="break-words text-tw-text-14 font-semibold text-tw-primary-color-light max-sm:text-center">
           {parceiros}
         </span>
       </div>
@@ -70,7 +70,15 @@ const Card = ({
           <span className="text-tw-text-16 font-normal">{duracao}</span>
         </div>
         <div className="flex items-center justify-center gap-2 max-xl:col-span-2">
-          <Stars rating={avaliacao} />
+          <Stars
+            rating={avaliacao}
+            className={{
+              mainDivStyle: 'max-sm:gap-1',
+              fullStarStyle: 'max-sm:text-[16px]',
+              halfStarStyle: 'max-sm:text-[18px]',
+              emptyStarStyle: 'max-sm:text-[16px]',
+            }}
+          />
           <span className="text-tw-text-16 font-normal">
             {avaliacao.replace('.', ',')}
           </span>

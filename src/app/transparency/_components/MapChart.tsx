@@ -60,7 +60,7 @@ const MapChart = ({ data: dataProps }: MapChartProps) => {
 
   return (
     <section className="container rounded-[20px] bg-tw-neutral-100 p-8 shadow-md">
-      <h2 className="text-center text-[25px] text-tw-primary-color-light">
+      <h2 className="text-center text-tw-text-26 text-tw-primary-color-light">
         Usuários por estado
       </h2>
       <div>

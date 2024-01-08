@@ -54,10 +54,10 @@ const TransparencyPage = async () => {
       <Header />
       <main className="mt-[100px] flex-1">
         <BreadCrumb />
-        <h1 className="container mt-8 text-center text-[40px] font-semibold text-tw-primary-color">
+        <h1 className="container mt-8 text-center text-tw-text-40 font-semibold text-tw-primary-color">
           Transparência
         </h1>
-        <div className="container mb-[200px] mt-8 grid grid-cols-2 gap-8">
+        <div className="container mb-[200px] mt-8 grid grid-cols-2 gap-8 max-lg:grid-cols-1">
           <SectionGeneralData generalData={data.dados_gerais} />
           <PieChart
             data={data.usuarios_por_curso}

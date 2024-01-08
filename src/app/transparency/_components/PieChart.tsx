@@ -55,7 +55,7 @@ const PieChart = ({ data: dataProps, colorsForChart }: PieChartProps) => {
 
   return (
     <section className="container rounded-[20px] bg-tw-neutral-100 p-8 shadow-md">
-      <h2 className="text-center text-[25px] text-tw-primary-color-light">
+      <h2 className="text-center text-tw-text-26 text-tw-primary-color-light">
         Usuários por curso
       </h2>
       <div>
@@ -64,12 +64,11 @@ const PieChart = ({ data: dataProps, colorsForChart }: PieChartProps) => {
           {dataProps.map((data, index) => (
             <div key={index} className="flex gap-2">
               <div
-                className="block h-[20px] w-[20px] rounded-full"
+                className="block h-[20px] max-h-[20px] min-h-[20px] w-[20px] min-w-[20px] max-w-[20px] rounded-full"
                 style={{ background: `${colorsForChart[index]}` }}
               />
-              <span className="text-base font-bold">{data.curso}:</span>
-              <span className="text-base font-bold">
-                {data.usuarios.toLocaleString('pt-BR')}
+              <span className="break-words text-tw-text-16 font-bold">
+                {data.curso}: {data.usuarios.toLocaleString('pt-BR')}
               </span>
             </div>
           ))}
