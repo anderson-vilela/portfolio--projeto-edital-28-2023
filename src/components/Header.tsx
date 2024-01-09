@@ -3,11 +3,15 @@ import logoAvaSusDesktop from '@/assets/img/logo-avasus.svg'
 import LoginAndRegisterButtons from '@/fragments/LoginAndRegisterButtons'
 import NavBarDesktop from '@/fragments/NavBarDesktop'
 import NavBarMobile from '@/fragments/NavBarMobile'
+import { currentUser } from '@clerk/nextjs'
+import { User } from '@clerk/nextjs/server'
 import Image from 'next/image'
 import Link from 'next/link'
 import SearchButton from './SearchButton'
 
-const Header = () => {
+const Header = async () => {
+  const user: User | null = await currentUser()
+
   return (
     <header className="fixed left-0 top-0 z-50 grid min-h-[100px] w-full gap-2 bg-tw-neutral-0 px-5 py-5 font-bold text-tw-neutral-400 drop-shadow-md xl:px-10 2xl:text-[18px] min-[1800px]:gap-4 min-[1800px]:px-20 min-[1800px]:text-xl">
       <div className="flex w-full items-center justify-between md:gap-8">
@@ -34,7 +38,7 @@ const Header = () => {
         <div className="flex items-center gap-4 max-sm:gap-0">
           <NavBarDesktop />
           <SearchButton />
-          <LoginAndRegisterButtons />
+          <LoginAndRegisterButtons user={user} />
         </div>
       </div>
     </header>

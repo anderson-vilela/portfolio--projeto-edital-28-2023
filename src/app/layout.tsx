@@ -12,7 +12,7 @@ const monstserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'Next-SUS',
+  title: 'AVASUS',
   description:
     'Desenvolvimento para o projeto avaliativo do Edital 028/2023 - LAIS / HUOL / UFRN. O projeto foi desenvolvido em React.js / Next.js pelo candidato Anderson Vilela.',
 }

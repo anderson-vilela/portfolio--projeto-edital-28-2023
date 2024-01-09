@@ -7,10 +7,15 @@ import {
   SignedOut,
   UserButton,
 } from '@clerk/nextjs'
+import { User } from '@clerk/nextjs/server'
 import { GrUserExpert } from 'react-icons/gr'
 import { VscLoading } from 'react-icons/vsc'
 
-const LoginAndRegisterButtons = () => {
+type LoginAndRegisterButtonsProps = {
+  user: User | null
+}
+
+const LoginAndRegisterButtons = ({ user }: LoginAndRegisterButtonsProps) => {
   return (
     <div>
       <ClerkLoading>
@@ -34,7 +39,17 @@ const LoginAndRegisterButtons = () => {
       </ClerkLoading>
       <ClerkLoaded>
         <SignedIn>
-          <UserButton />
+          <div className="flex items-center justify-center gap-2">
+            {user?.firstName ? (
+              <span className="text-tw-text-18 font-semibold">
+                Olá, {user?.firstName}
+              </span>
+            ) : (
+              <span className="text-tw-text-18 font-semibold">Bem vindo!</span>
+            )}
+
+            <UserButton />
+          </div>
         </SignedIn>
         <SignedOut>
           <div
