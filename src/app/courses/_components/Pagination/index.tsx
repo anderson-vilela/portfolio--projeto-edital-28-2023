@@ -36,8 +36,10 @@ const Pagination = ({
           >
             <FaRegArrowAltCircleLeft />
           </button>
-          <span className="text-lg">
-            Página {currentPage} de {listOfPages.length}
+          <span className="text-center text-lg">
+            Página
+            <br />
+            {currentPage} de {listOfPages.length}
           </span>
           <button
             type="button"
