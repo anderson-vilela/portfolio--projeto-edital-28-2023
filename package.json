@@ -10,6 +10,8 @@
     "server": "cd ../api && npm run start"
   },
   "dependencies": {
+    "@clerk/localizations": "^1.26.13",
+    "@clerk/nextjs": "^4.29.2",
     "@highcharts/map-collection": "^2.1.0",
     "highcharts": "^11.2.0",
     "highcharts-react-official": "^3.2.1",

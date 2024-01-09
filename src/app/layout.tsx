@@ -1,3 +1,5 @@
+import { ptBR } from '@clerk/localizations'
+import { ClerkProvider } from '@clerk/nextjs'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import { ReactNode } from 'react'
@@ -17,8 +19,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-BR">
-      <body className={monstserrat.className}>{children}</body>
-    </html>
+    <ClerkProvider localization={ptBR}>
+      <html lang="pt-BR">
+        <body className={monstserrat.className}>{children}</body>
+      </html>
+    </ClerkProvider>
   )
 }
