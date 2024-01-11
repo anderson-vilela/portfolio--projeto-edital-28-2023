@@ -41,14 +41,15 @@ const LoginAndRegisterButtons = ({ user }: LoginAndRegisterButtonsProps) => {
         <SignedIn>
           <div className="flex items-center justify-center gap-2">
             {user?.firstName ? (
-              <span className="text-tw-text-18 font-semibold">
+              <span className="text-tw-text-18 font-semibold max-sm:hidden">
                 Olá, {user?.firstName}
               </span>
             ) : (
-              <span className="text-tw-text-18 font-semibold">Bem vindo!</span>
+              <span className="text-tw-text-18 font-semibold max-sm:hidden">
+                Bem vindo!
+              </span>
             )}
-
-            <UserButton />
+            <UserButton signInUrl="/home" afterSignOutUrl="/home" />
           </div>
         </SignedIn>
         <SignedOut>

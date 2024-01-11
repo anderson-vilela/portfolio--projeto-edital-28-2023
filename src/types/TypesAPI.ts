@@ -25,6 +25,7 @@ export interface APIDataType {
   resumo: string
   duracao: string
   matriculados: number
+  lista_de_usuarios_matriculados?: string[]
   criado_em: string
   avaliacao: string
   numero_avaliacoes: number

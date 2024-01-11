@@ -66,6 +66,7 @@ const SlideCarousel = () => {
           alt="Slide 2"
           className="object-cover grayscale-[70%]"
           quality={100}
+          sizes="100vw"
           fill
           priority
         />
@@ -88,6 +89,7 @@ const SlideCarousel = () => {
           alt="Slide 3"
           className="object-cover grayscale-[70%]"
           quality={100}
+          sizes="100vw"
           fill
           priority
         />

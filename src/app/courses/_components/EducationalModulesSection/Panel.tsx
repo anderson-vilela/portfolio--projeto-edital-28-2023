@@ -2,12 +2,14 @@
 
 import Stars from '@/components/Stars'
 import { APIDataType } from '@/types/TypesAPI'
+import { useAuth } from '@clerk/nextjs'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { FaClock } from 'react-icons/fa6'
 import { HiUsers } from 'react-icons/hi2'
 import { ListOfCoursesType } from '.'
+import FormSubscribe from '../FormSubscribe'
 import Pagination from '../Pagination'
 
 type SearchResultsType = {
@@ -20,6 +22,8 @@ type PanelProps = {
 }
 
 const Panel = ({ listOfCourses }: PanelProps) => {
+  const { userId } = useAuth()
+
   const categorys = listOfCourses
     ? listOfCourses.map((course) => course.category)
     : []
@@ -95,22 +99,20 @@ const Panel = ({ listOfCourses }: PanelProps) => {
         )}
       </div>
       <div className="mt-8 grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-md:grid-cols-1 max-md:gap-16">
-        {coursesToView?.map(
-          ({
-            id,
-            capa,
-            titulo,
-            parceiros,
-            matriculados,
-            duracao,
-            avaliacao,
-            resumo,
-          }) => (
-            <div key={id} className="grid gap-3">
+        {coursesToView?.map((course: APIDataType) => {
+          let isAlreadyRegistered = false
+
+          if (course.lista_de_usuarios_matriculados && userId) {
+            isAlreadyRegistered =
+              course.lista_de_usuarios_matriculados.includes(userId)
+          }
+
+          return (
+            <div key={course.id} className="grid gap-3">
               <div className="relative h-[200px] w-full overflow-hidden rounded-[20px]">
                 <Image
-                  src={capa}
-                  alt={`Capa do curso: ${titulo}`}
+                  src={course.capa}
+                  alt={`Capa do curso: ${course.titulo}`}
                   quality={50}
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -119,10 +121,10 @@ const Panel = ({ listOfCourses }: PanelProps) => {
               </div>
               <div className="grid gap-2">
                 <h2 className="break-words text-tw-text-26 font-semibold max-lg:text-justify max-md:text-center">
-                  {titulo}
+                  {course.titulo}
                 </h2>
                 <span className="break-words text-tw-text-14 font-semibold text-tw-primary-color-light max-lg:text-center">
-                  {parceiros}
+                  {course.parceiros}
                 </span>
               </div>
               <div className="flex items-center justify-between max-xl:flex-col max-md:flex-row max-md:justify-center max-md:gap-8 max-sm:flex-col max-sm:gap-2">
@@ -132,7 +134,7 @@ const Panel = ({ listOfCourses }: PanelProps) => {
                       <HiUsers className="h-full w-full" />
                     </div>
                     <span className="text-tw-text-18 font-normal">
-                      {matriculados.toLocaleString('pt-BR')}
+                      {course.matriculados.toLocaleString('pt-BR')}
                     </span>
                   </div>
                   <div className="flex items-center justify-center gap-2">
@@ -140,13 +142,13 @@ const Panel = ({ listOfCourses }: PanelProps) => {
                       <FaClock className="h-full w-full" />
                     </div>
                     <span className="text-tw-text-18 font-normal">
-                      {duracao}
+                      {course.duracao}
                     </span>
                   </div>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Stars
-                    rating={avaliacao}
+                    rating={course.avaliacao}
                     className={{
                       fullStarStyle: 'scale-75',
                       halfStarStyle: 'scale-75',
@@ -155,26 +157,27 @@ const Panel = ({ listOfCourses }: PanelProps) => {
                     }}
                   />
                   <span className="text-tw-text-18 font-normal">
-                    {avaliacao.replace('.', ',')}
+                    {course.avaliacao.replace('.', ',')}
                   </span>
                 </div>
               </div>
               <div>
                 <p className="text-tw-text-16 font-medium max-lg:text-justify">
-                  {resumo.replace(/ Ver mais$/, '...')}
+                  {course.resumo.replace(/ Ver mais$/, '...')}
                 </p>
               </div>
-              <div className="flex justify-end">
+              <div className="flex items-center justify-between max-sm:flex-col-reverse max-sm:gap-4">
+                <FormSubscribe course={course} />
                 <Link
-                  href={`/courses/${id}`}
+                  href={`/courses/${course.id}`}
                   className="text-tw-text-18 font-semibold text-tw-secundary-color-light duration-300 hover:text-tw-secundary-color-dark hover:underline"
                 >
                   Ver curso
                 </Link>
               </div>
             </div>
-          ),
-        )}
+          )
+        })}
       </div>
       <Pagination
         listOfPages={listOfPages}

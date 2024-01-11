@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FaCalendarCheck, FaClock } from 'react-icons/fa6'
 import { HiUsers } from 'react-icons/hi2'
+import FormSubscribe from '../_components/FormSubscribe'
 
 const GetCourseDetails = async (id: number): Promise<APIDataType> => {
   const response = await fetch(
@@ -91,6 +92,9 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
           </div>
         </div>
         <section className="container mt-8">
+          <div className="my-10 flex items-center justify-center">
+            <FormSubscribe course={course} />
+          </div>
           <h2 className="text-center text-tw-text-40 font-semibold text-tw-primary-color">
             Informações Gerais do Curso
           </h2>
@@ -142,6 +146,7 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
               </p>
             </div>
           </div>
+
           <div className="mt-[45px]">
             <h3 className="text-center text-tw-text-26 font-semibold text-tw-primary-color">
               Sobre o curso
