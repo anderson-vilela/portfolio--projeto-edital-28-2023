@@ -1,12 +1,12 @@
-# projeto-edital-28-2023
+# projeto-edital-28-2023 - Resultado final disponível no link: https://lais.huol.ufrn.br/wp-content/uploads/2024/01/Edital-28_2023-Resultado-Final-Fase-2-Assinado-eletronicamente.pdf
 
 Esse aplicativo foi construído para o processo seletivo do LAIS - Laboratório de Inovação Tecnológica em Saúde, Edital 28/2023. Ele utiliza o Next.js, um framework para criar aplicações web com React. Além disso, é foi utilizado o Clerk para Autenticação dos usuários. O Next.js oferece vários recursos que facilitam o desenvolvimento, como:
 
-- Sistema de Cache optimizado.
+- Sistema de Cache otimizado.
 - Renderização híbrida: permite rendezirar os componentes e páginas no servidor ou cliente, de acordo com a necessidade da aplicação.
 - Geração estática: permite gerar páginas HTML estáticas em tempo de construção, otimizando o desempenho e a SEO.
 - Roteamento baseado em arquivos: permite criar rotas dinâmicas e aninhadas simplesmente criando arquivos e pastas na pasta APP.
-- Sistema optimizado de Data Fetching do lado Servidor e utilização de cache.
+- Sistema otimizado de Data Fetching do lado Servidor e utilização de cache.
 - Image: permite otimizar e servir imagens de forma responsiva, usando o componente Image do Next.js.
 - Suporte nativo ao TypeScript: permite usar o TypeScript, um superconjunto de JavaScript que adiciona tipos estáticos e verificações de erros em tempo de compilação.
 - Suporte nativo ao Tailwindcss: permite usar classes utilitárias para estilizar meus elementos diretamente no HTML, com uma sintaxe simples e responsiva, promovendo agilidade e desempenho.
