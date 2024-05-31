@@ -1,4 +1,5 @@
-# projeto-edital-28-2023 - Resultado final disponível no link: https://lais.huol.ufrn.br/wp-content/uploads/2024/01/Edital-28_2023-Resultado-Final-Fase-2-Assinado-eletronicamente.pdf
+# projeto-edital-28-2023
+# Resultado final disponível no link: https://lais.huol.ufrn.br/wp-content/uploads/2024/01/Edital-28_2023-Resultado-Final-Fase-2-Assinado-eletronicamente.pdf
 
 Esse aplicativo foi construído para o processo seletivo do LAIS - Laboratório de Inovação Tecnológica em Saúde, Edital 28/2023. Ele utiliza o Next.js, um framework para criar aplicações web com React. Além disso, é foi utilizado o Clerk para Autenticação dos usuários. O Next.js oferece vários recursos que facilitam o desenvolvimento, como:
 
