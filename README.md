@@ -2,6 +2,8 @@
 
 Este projeto foi desenvolvido como parte do processo seletivo do **LAIS - Laboratório de Inovação Tecnológica em Saúde**, referente ao **Edital 28/2023**. O frontend foi construído utilizando **Next.js 14**, um framework React que oferece recursos avançados como renderização híbrida, geração estática, roteamento baseado em arquivos e muito mais.
 
+Você pode acessar o projeto através do [link disponível](https://portfolio-lais-huol.andersonvilela.dev/).
+
 O projeto está integrado com o **Clerk** para autenticação de usuários e utiliza **Tailwind CSS** para estilização. Além disso, ele consome uma API backend, cuja documentação pode ser encontrada [aqui](https://github.com/anderson-vilela/portfolio--projeto-edital-28-2023-api).
 
 ---
