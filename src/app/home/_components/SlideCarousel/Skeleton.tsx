@@ -5,6 +5,7 @@ const Skeleton = () => {
   return (
     <div className="flex h-full w-full items-center justify-center bg-gray-200">
       <Image
+        unoptimized
         src={loadingSlide}
         alt="Carregando Slide"
         className="animate-pulse object-cover"

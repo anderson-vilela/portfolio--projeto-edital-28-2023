@@ -1,50 +1,211 @@
-# projeto-edital-28-2023
-# Link do projeto: https://projeto-lais.andersonvilela.dev/
-# Resultado final disponível no link: https://lais.huol.ufrn.br/wp-content/uploads/2024/01/Edital-28_2023-Resultado-Final-Fase-2-Assinado-eletronicamente.pdf
+```markdown
+# Projeto Edital 28/2023 - Frontend Next.js 14
 
-Esse aplicativo foi construído para o processo seletivo do LAIS - Laboratório de Inovação Tecnológica em Saúde, Edital 28/2023. Ele utiliza o Next.js, um framework para criar aplicações web com React. Além disso, é foi utilizado o Clerk para Autenticação dos usuários. O Next.js oferece vários recursos que facilitam o desenvolvimento, como:
+Este projeto foi desenvolvido como parte do processo seletivo do **LAIS - Laboratório de Inovação Tecnológica em Saúde**, referente ao **Edital 28/2023**. O frontend foi construído utilizando **Next.js 14**, um framework React que oferece recursos avançados como renderização híbrida, geração estática, roteamento baseado em arquivos e muito mais.
 
-- Sistema de Cache otimizado.
-- Renderização híbrida: permite rendezirar os componentes e páginas no servidor ou cliente, de acordo com a necessidade da aplicação.
-- Geração estática: permite gerar páginas HTML estáticas em tempo de construção, otimizando o desempenho e a SEO.
-- Roteamento baseado em arquivos: permite criar rotas dinâmicas e aninhadas simplesmente criando arquivos e pastas na pasta APP.
-- Sistema otimizado de Data Fetching do lado Servidor e utilização de cache.
-- Image: permite otimizar e servir imagens de forma responsiva, usando o componente Image do Next.js.
-- Suporte nativo ao TypeScript: permite usar o TypeScript, um superconjunto de JavaScript que adiciona tipos estáticos e verificações de erros em tempo de compilação.
-- Suporte nativo ao Tailwindcss: permite usar classes utilitárias para estilizar meus elementos diretamente no HTML, com uma sintaxe simples e responsiva, promovendo agilidade e desempenho.
-- Suporte nativo ao eslint: ferramenta que me ajuda a encontrar e corrigir problemas no código JavaScript e manter padrões definidos para o projeto.
+O projeto está integrado com o **Clerk** para autenticação de usuários e utiliza **Tailwind CSS** para estilização. Além disso, ele consome uma API backend, cuja documentação pode ser encontrada [aqui](https://github.com/anderson-vilela/portfolio--projeto-edital-28-2023-api).
 
-## Instalação
+---
 
-### Instalação do projeto
+## 🚀 Visão Geral do Projeto
 
-1. Clone o repositório do GitHub: (https://github.com/anderson-vilela/projeto-edital-28-2023.git).
-2. Instale as dependências: (npm install).
+### Tecnologias Utilizadas
 
-### Instalação da API
+- **Next.js 14**: Framework React para construção de aplicações web modernas.
+- **React 18**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **Clerk**: Autenticação de usuários.
+- **Tailwind CSS**: Framework CSS utilitário para estilização rápida e responsiva.
+- **Highcharts**: Biblioteca para criação de gráficos interativos.
+- **Axios**: Cliente HTTP para consumo de APIs.
+- **TypeScript**: Superconjunto de JavaScript com tipagem estática.
+- **Docker**: Containerização para deploy e execução do projeto.
 
-1. Clone o repositório do GitHub no link a seguir: (https://github.com/lais-huol/edital-001-23-modulos-educacionais).
-2. Instale as dependências: (npm install).
+### Funcionalidades Principais
 
-### Login ou Cadastro no Clerk (https://clerk.com/). OBS: Essa aplicação utiliza o Clerk para autenticação de usuários.
+- Autenticação de usuários com **Clerk**.
+- Consumo de dados da API backend.
+- Exibição de gráficos interativos com **Highcharts**.
+- Estilização responsiva com **Tailwind CSS**.
+- Deploy otimizado com **Docker**.
 
-1. Caso não tenha um cadastro, cadastre-se. Caso contrário, efetue o login.
-2. Crie uma nova aplicação no Clerk.
-3. Anote suas credenciais (NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY e CLERK_SECRET_KEY).
+---
 
-## Configuração
+## 📋 Pré-requisitos
 
-1. renomeie o arquivo ".env.exemple" para ".env.local"
-2. inclua suas credenciais do Clerk no arquivo ".env.local"
-3. inclua seu endereço para API (ex: URL_API_JSON_SERVER=http://localhost:3004), seu endereço base deve ser igual ao utilizado pela API (Padrão utilizado pela API: http://localhost:3004).
+Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:
 
-## Inicialização do projeto
+- **Node.js** (v18 ou superior)
+- **npm** ou **yarn** (gerenciadores de pacotes)
+- **Docker** (opcional, para rodar o projeto em container)
+- **Git** (para clonar o repositório)
 
-1. Inicie a aplicação API. (npm run start)
-2. Inicie a aplicação Next.js. (npm run dev)
+---
 
-## Build do projeto
+## 🛠️ Instalação e Configuração
 
-1. Inicie a aplicação API. (npm run start)
-2. Rode o script para build do projeto Next.js. (npm run build)
-3. Caso queira inicializar a build do projeto, você deve manter a API rodando e rodar o script "npm run start"
+### 1. Clonar o Repositório
+
+Clone o repositório do projeto usando o seguinte comando:
+
+```bash
+git clone https://github.com/anderson-vilela/projeto-edital-28-2023.git
+cd projeto-edital-28-2023
+```
+
+### 2. Instalar Dependências
+
+Instale as dependências do projeto com o comando:
+
+```bash
+npm install
+```
+
+### 3. Configurar Variáveis de Ambiente
+
+Renomeie o arquivo `.env.example` para `.env` e configure as seguintes variáveis:
+
+```env
+# Credenciais do Clerk (obtidas no painel do Clerk)
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key
+CLERK_SECRET_KEY=your_secret_key
+
+# URL da API backend
+URL_API_JSON_SERVER=http://localhost:3000
+```
+
+### 4. Configurar o Clerk
+
+1. Acesse o [Clerk](https://clerk.com/) e crie uma nova aplicação.
+2. Obtenha as credenciais (`NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` e `CLERK_SECRET_KEY`).
+3. Adicione essas credenciais no arquivo `.env`.
+
+---
+
+## 🚀 Executando o Projeto
+
+### Modo Desenvolvimento
+
+Para rodar o projeto em modo de desenvolvimento, execute:
+
+```bash
+npm run node:dev
+```
+
+O servidor será iniciado na porta `8000`. Acesse `http://localhost:8000` no navegador.
+
+### Modo Produção
+
+1. **Build do Projeto**:
+   Execute o comando abaixo para gerar a build de produção:
+   ```bash
+   npm run node:build
+   ```
+
+2. **Iniciar o Servidor**:
+   Após a build, inicie o servidor com:
+   ```bash
+   npm run node:start
+   ```
+
+   O servidor será iniciado na porta `3000`. Acesse `http://localhost:3000` no navegador.
+
+---
+
+## 🐳 Executando com Docker
+
+### 1. Construir a Imagem Docker
+
+Para construir a imagem Docker, execute:
+
+```bash
+npm run docker:build
+```
+
+### 2. Rodar o Container
+
+Para rodar o container, execute:
+
+```bash
+npm run docker:run
+```
+
+O container será iniciado na porta `8000`. Acesse `http://localhost:8000` no navegador.
+
+### 3. Rodar em uma Porta Específica
+
+Se precisar rodar o container em uma porta diferente, use o comando abaixo, substituindo `port` pela porta desejada:
+
+```bash
+docker run --rm -p port:3000 anderson-vilela/portfolio-lais-huol:v1.0
+```
+
+**Exemplo**:
+Para rodar na porta `5000`, use:
+```bash
+docker run --rm -p 5000:3000 anderson-vilela/portfolio-lais-huol:v1.0
+```
+
+---
+
+## 📂 Estrutura do Projeto
+
+A estrutura do projeto é organizada da seguinte forma:
+
+- **`src/`**: Código-fonte do projeto (componentes, hooks, serviços, etc.).
+- **`src/app/`**: Contém as páginas e rotas do Next.js.
+- **`tailwind.config.js`**: Configuração do Tailwind CSS.
+- **`Dockerfile`**: Configuração do Docker para deploy.
+- **`.env.example`**: Exemplo de arquivo de variáveis de ambiente.
+
+---
+
+## 🔧 Comandos Úteis
+
+- **Rodar em Modo Desenvolvimento**:
+  ```bash
+  npm run node:dev
+  ```
+
+- **Gerar Build de Produção**:
+  ```bash
+  npm run node:build
+  ```
+
+- **Iniciar Servidor de Produção**:
+  ```bash
+  npm run node:start
+  ```
+
+- **Construir Imagem Docker**:
+  ```bash
+  npm run docker:build
+  ```
+
+- **Rodar Container Docker**:
+  ```bash
+  npm run docker:run
+  ```
+
+- **Executar Lint**:
+  ```bash
+  npm run lint
+  ```
+
+---
+
+## ❓ Dúvidas ou Problemas
+
+Se você encontrar algum problema ou tiver dúvidas sobre o projeto, siga estas etapas:
+
+1. Verifique se todas as dependências estão corretamente instaladas.
+2. Consulte a documentação oficial do [Next.js](https://nextjs.org/docs) e [Clerk](https://clerk.com/docs).
+3. Caso o problema persista, abra uma **issue** no repositório do GitHub.
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
+
+Feito com ❤️ por [Anderson Vilela](https://github.com/anderson-vilela).
+``

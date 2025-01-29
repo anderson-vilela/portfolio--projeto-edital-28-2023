@@ -29,6 +29,7 @@ const CardSearch = ({
     <div key={id} className="grid gap-3">
       <div className="relative h-[200px] w-full overflow-hidden rounded-[20px]">
         <Image
+          unoptimized
           src={capa}
           alt={`Capa do curso: ${titulo}`}
           quality={50}

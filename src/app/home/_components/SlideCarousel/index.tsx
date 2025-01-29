@@ -36,6 +36,7 @@ const SlideCarousel = () => {
         id="slide-1"
       >
         <Image
+          unoptimized
           src={slide1}
           alt="Slide 1"
           className="h-full w-full object-cover grayscale-[25%]"
@@ -45,6 +46,7 @@ const SlideCarousel = () => {
         />
         <div className="absolute left-0 top-0 z-10 flex h-full w-full flex-col items-center justify-center gap-4 max-sm:gap-2">
           <Image
+            unoptimized
             src={slideLogoAvasus}
             quality={100}
             alt="Slide 1 - Logo AVASUS"
@@ -62,6 +64,7 @@ const SlideCarousel = () => {
         id="slide-2"
       >
         <Image
+          unoptimized
           src={slide2}
           alt="Slide 2"
           className="object-cover grayscale-[70%]"
@@ -85,6 +88,7 @@ const SlideCarousel = () => {
         id="slide-3"
       >
         <Image
+          unoptimized
           src={slide3}
           alt="Slide 3"
           className="object-cover grayscale-[70%]"
@@ -104,13 +108,13 @@ const SlideCarousel = () => {
         onClick={handlePrevSlide}
         className="absolute left-8 top-1/2 z-20 flex h-[4.5rem] w-[4.5rem] cursor-pointer items-center justify-center rounded-full bg-slate-800/30 max-sm:hidden"
       >
-        <Image src={arrowLeft} alt="Botão Slide Anterior" />
+        <Image unoptimized src={arrowLeft} alt="Botão Slide Anterior" />
       </button>
       <button
         onClick={handleNextSlide}
         className="absolute right-8 top-1/2 z-20 flex h-[4.5rem] w-[4.5rem] cursor-pointer items-center justify-center rounded-full bg-slate-800/30 max-sm:hidden"
       >
-        <Image src={arrowRight} alt="Botão Slide Seguinte" />
+        <Image unoptimized src={arrowRight} alt="Botão Slide Seguinte" />
       </button>
       <nav className="absolute bottom-20 left-0 right-0 z-20">
         <ul className="flex items-center justify-center gap-2">

@@ -35,6 +35,7 @@ const Card = ({
     <div className="mx-auto flex w-full flex-col items-center justify-between gap-5 rounded-[20px] bg-tw-neutral-100 p-5 last:max-lg:col-span-2 last:max-lg:max-w-[336px] last:max-md:max-w-[288px] last:max-sm:col-span-1 last:max-sm:max-w-full xl:flex-row">
       <div className="relative flex w-full items-center justify-center overflow-hidden rounded-[20px] bg-tw-neutral-300 max-xl:h-[250px] xl:h-full xl:min-h-[120px] xl:w-[120px]">
         <Image
+          unoptimized
           src={capa}
           alt={`Capa do Módulo: ${titulo}`}
           className="object-cover"

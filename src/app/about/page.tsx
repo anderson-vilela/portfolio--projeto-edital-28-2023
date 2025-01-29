@@ -31,6 +31,7 @@ const AboutPage = () => {
           <div className="my-16 flex items-center justify-between gap-8 max-lg:flex-col">
             <div className="relative h-[200px] max-h-[200px] min-h-[200px] w-[400px] min-w-[400px] max-w-[400px] max-lg:order-1 max-sm:w-[100%] max-sm:min-w-[100%]">
               <Image
+                unoptimized
                 className="object-contain"
                 fill
                 src={imgNossaMissao}
@@ -62,6 +63,7 @@ const AboutPage = () => {
             </div>
             <div className="relative h-[200px] max-h-[200px] min-h-[200px] w-[400px] min-w-[400px] max-w-[400px] max-lg:order-1 max-sm:w-[100%] max-sm:min-w-[100%]">
               <Image
+                unoptimized
                 src={imgReferenciaEAD}
                 alt="Imagem: Referência em EAD"
                 className="object-contain"
@@ -74,6 +76,7 @@ const AboutPage = () => {
           <div className="my-16 flex items-center justify-between gap-8 max-lg:flex-col">
             <div className="relative h-[200px] max-h-[200px] min-h-[200px] w-[400px] min-w-[400px] max-w-[400px] max-lg:order-1 max-sm:w-[100%] max-sm:min-w-[100%]">
               <Image
+                unoptimized
                 src={imgQuemPodeParticipar}
                 alt="Imagem: Quem pode participar"
                 className="object-contain"
@@ -105,6 +108,7 @@ const AboutPage = () => {
             </div>
             <div className="relative h-[200px] max-h-[200px] min-h-[200px] w-[400px] min-w-[400px] max-w-[400px] max-lg:order-1 max-sm:w-[100%] max-sm:min-w-[100%]">
               <Image
+                unoptimized
                 src={imgAprendaNoSeuTempo}
                 alt="Imagem: Aprenda no seu tempo"
                 className="object-contain"
@@ -117,6 +121,7 @@ const AboutPage = () => {
           <div className="my-16 flex items-center justify-between gap-8 max-lg:flex-col">
             <div className="relative h-[200px] max-h-[200px] min-h-[200px] w-[400px] min-w-[400px] max-w-[400px] max-lg:order-1 max-sm:w-[100%] max-sm:min-w-[100%]">
               <Image
+                unoptimized
                 src={imgComeceAgora}
                 alt="Imagem: Comece agora"
                 className="object-contain"

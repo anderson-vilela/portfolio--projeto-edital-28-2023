@@ -75,6 +75,7 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
             </ul>
           </nav>
           <Image
+            unoptimized
             src={course.capa}
             alt={course.titulo}
             quality={100}
@@ -203,6 +204,7 @@ const CourseDetails = async ({ params }: CourseDetailsProps) => {
                   className="flex h-full w-full items-center justify-center max-sm:mx-auto max-sm:w-2/3"
                 >
                   <Image
+                    unoptimized
                     src={credit.capa}
                     alt={credit.titulo}
                     className="object-contain"

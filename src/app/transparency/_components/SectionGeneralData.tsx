@@ -37,6 +37,7 @@ const SectionGeneralData = ({ generalData }: SectionGeneralDataProps) => {
           <div className="flex items-center justify-center gap-2">
             <div className="h-5 w-5 text-tw-primary-color-light max-sm:hidden">
               <Image
+                unoptimized
                 src={registrationsMade}
                 alt="Ícone Inscrições Realiazadas"
               />
@@ -68,6 +69,7 @@ const SectionGeneralData = ({ generalData }: SectionGeneralDataProps) => {
           <div className="flex items-center justify-center gap-2">
             <div className="h-7 w-7 text-tw-primary-color-light max-sm:hidden">
               <Image
+                unoptimized
                 src={rightToCertification}
                 alt="Ícone Direito à Certificação"
               />
@@ -86,6 +88,7 @@ const SectionGeneralData = ({ generalData }: SectionGeneralDataProps) => {
           <div className="flex items-center justify-center gap-2">
             <div className="h-7 w-7 text-tw-primary-color-light max-sm:hidden">
               <Image
+                unoptimized
                 src={averageInvestmentPerCourse}
                 alt="Ícone Investimento médio por curso"
               />
@@ -104,6 +107,7 @@ const SectionGeneralData = ({ generalData }: SectionGeneralDataProps) => {
           <div className="flex items-center justify-center gap-2">
             <div className="h-7 w-7 text-tw-primary-color-light max-sm:hidden">
               <Image
+                unoptimized
                 src={averageInvestmentPerStudent}
                 alt="Ícone Investimento médio por aluno"
               />

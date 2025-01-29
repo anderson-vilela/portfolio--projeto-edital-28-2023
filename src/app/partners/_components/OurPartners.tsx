@@ -51,6 +51,7 @@ const OurPartners = ({ partners }: OurPartnersProps) => {
                   </div>
                 ) : (
                   <Image
+                    unoptimized
                     src={capa}
                     alt={titulo}
                     className="object-contain"

@@ -14,15 +14,20 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex items-center justify-center gap-20 p-8 max-sm:flex-col max-sm:p-16">
-          <Image src={logoLAIS} alt="Logomarca LAIS" width={245} />
-          <Image src={logoUFRN} alt="Logomarca UFRN" width={224} />
+          <Image unoptimized src={logoLAIS} alt="Logomarca LAIS" width={245} />
+          <Image unoptimized src={logoUFRN} alt="Logomarca UFRN" width={224} />
         </div>
       </div>
       <div className="bg-tw-secundary-color">
         <div className="mx-auto flex max-w-[1000px] justify-between p-16 max-md:flex-col max-md:items-center max-md:gap-12 max-md:text-center">
           <div>
             <div className="max-md:flex max-md:justify-center">
-              <Image src={logoLAIS} alt="Logomarca LAIS" width={120} />
+              <Image
+                unoptimized
+                src={logoLAIS}
+                alt="Logomarca LAIS"
+                width={120}
+              />
             </div>
             <div className="mt-2">
               <p className="text-tw-neutral-0">

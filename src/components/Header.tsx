@@ -18,6 +18,7 @@ const Header = async () => {
         <div className="flex items-center gap-2">
           <Link id="logo-mobile" href="/home" className="md:hidden">
             <Image
+              unoptimized
               src={logoAvaSusMobile}
               alt="Logomarca"
               width={35}
@@ -26,6 +27,7 @@ const Header = async () => {
           </Link>
           <Link id="logo-desktop" href="/home" className="max-md:hidden">
             <Image
+              unoptimized
               src={logoAvaSusDesktop}
               alt="Logomarca"
               width={200}

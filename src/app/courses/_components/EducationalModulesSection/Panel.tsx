@@ -111,6 +111,7 @@ const Panel = ({ listOfCourses }: PanelProps) => {
             <div key={course.id} className="grid gap-3">
               <div className="relative h-[200px] w-full overflow-hidden rounded-[20px]">
                 <Image
+                  unoptimized
                   src={course.capa}
                   alt={`Capa do curso: ${course.titulo}`}
                   quality={50}
