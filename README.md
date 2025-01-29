@@ -1,4 +1,3 @@
-```markdown
 # Projeto Edital 28/2023 - Frontend Next.js 14
 
 Este projeto foi desenvolvido como parte do processo seletivo do **LAIS - Laboratório de Inovação Tecnológica em Saúde**, referente ao **Edital 28/2023**. O frontend foi construído utilizando **Next.js 14**, um framework React que oferece recursos avançados como renderização híbrida, geração estática, roteamento baseado em arquivos e muito mais.
@@ -50,7 +49,6 @@ Clone o repositório do projeto usando o seguinte comando:
 ```bash
 git clone https://github.com/anderson-vilela/projeto-edital-28-2023.git
 cd projeto-edital-28-2023
-```
 
 ### 2. Instalar Dependências
 
